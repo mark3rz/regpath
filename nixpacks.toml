@@ -1,3 +1,8 @@
-# Railway / Nixpacks: Next.js 16 needs Node >= 20.9. Pin 22 explicitly.
+# Railway / Nixpacks. Next.js 16 needs Node >= 20.9, so pin 22.
+# Install is left to Nixpacks' own phase (`npm ci`); running it again in the
+# build phase collides with the node_modules/.cache mount (EBUSY).
 [phases.setup]
 nixPkgs = ["nodejs_22"]
+
+[phases.build]
+cmds = ["npm run build"]

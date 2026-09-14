@@ -116,8 +116,8 @@ function time limit (Vercel cuts requests off at 5 min on Hobby / ~13 min on Pro
 Railway, Render, Fly.io. Railway, step by step:
 
 1. Push this repo to GitHub (private is fine).
-2. [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub repo** → pick the repo. `railway.json` pins the
-   build (`npm ci && npm run build`) and start (`npm start`) commands; Next.js reads Railway's `PORT` automatically.
+2. [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub repo** → pick the repo. `nixpacks.toml` pins Node 22
+   and the build command, `railway.json` the start command; Next.js reads Railway's `PORT` automatically.
 3. **Settings → Networking → Generate Domain** to get a public URL.
 4. **Variables** (all optional): `ANTHROPIC_API_KEY` if you want pitch parsing to work for users who haven't entered a key yet
    (research always needs the user's own key); `REGPATH_EFFORT`, `REGPATH_WEB_SEARCH` as documented above.
