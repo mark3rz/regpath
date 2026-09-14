@@ -41,8 +41,12 @@ export interface GenerateResult {
 const MAX_CONTINUATIONS = 6;
 const WEB_SEARCH_MAX_USES = 25;
 
-export async function generatePlan(input: GenerateInput, onProgress: (e: ProgressEvent) => void = () => {}): Promise<GenerateResult> {
-  const client = getClient();
+export async function generatePlan(
+  input: GenerateInput,
+  onProgress: (e: ProgressEvent) => void = () => {},
+  opts: { apiKey?: string } = {},
+): Promise<GenerateResult> {
+  const client = getClient(opts.apiKey);
   const prePatent = input.answers.ipStatus === "pre-patent";
   const userPrompt = generateUserPrompt(
     input.intake,

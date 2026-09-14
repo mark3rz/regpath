@@ -9,8 +9,8 @@ import type { DeckInput } from "./extract";
  * Intake parsing: one structured-output call that reads the founder's text
  * and/or deck and extracts the fields the question flow prefills from.
  */
-export async function parseIntake(text: string, deck: DeckInput | null): Promise<Intake> {
-  const client = getClient();
+export async function parseIntake(text: string, deck: DeckInput | null, apiKey?: string): Promise<Intake> {
+  const client = getClient(apiKey);
   const content: Anthropic.ContentBlockParam[] = [];
   if (deck?.kind === "pdf") {
     content.push({ type: "document", source: { type: "base64", media_type: "application/pdf", data: deck.data }, title: deck.filename });

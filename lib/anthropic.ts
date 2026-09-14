@@ -10,20 +10,43 @@ export const MODEL = process.env.REGPATH_MODEL || "claude-opus-5";
  */
 export const EFFORT = ((process.env.REGPATH_EFFORT || "high") as "low" | "medium" | "high" | "xhigh" | "max");
 
-let client: Anthropic | null = null;
+/**
+ * Header the browser uses to pass the founder's own API key (bring-your-own-key).
+ * The key lives in the browser's localStorage; the server uses it for the one
+ * request it arrives on and never stores or logs it.
+ */
+export const KEY_HEADER = "x-anthropic-key";
 
-/** Lazily constructed so importing this module never throws at build time. */
-export function getClient(): Anthropic {
-  if (!client) {
-    // Resolves ANTHROPIC_API_KEY (or ANTHROPIC_AUTH_TOKEN / an `ant auth login` profile) from the environment.
-    client = new Anthropic({ timeout: 10 * 60 * 1000, maxRetries: 2 });
-  }
-  return client;
+const CLIENT_OPTS = { timeout: 10 * 60 * 1000, maxRetries: 2 };
+let envClient: Anthropic | null = null;
+
+/**
+ * Per-request client when a key is supplied; otherwise a cached client that
+ * resolves ANTHROPIC_API_KEY (or ANTHROPIC_AUTH_TOKEN / an `ant auth login`
+ * profile) from the server environment. Lazy so importing never throws at build.
+ */
+export function getClient(apiKey?: string): Anthropic {
+  if (apiKey) return new Anthropic({ apiKey, ...CLIENT_OPTS });
+  if (!envClient) envClient = new Anthropic(CLIENT_OPTS);
+  return envClient;
 }
 
-export function hasCredentials(): boolean {
+export function hasServerCredentials(): boolean {
   return Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN || process.env.ANTHROPIC_PROFILE);
 }
+
+export function hasCredentials(apiKey?: string): boolean {
+  return Boolean(apiKey) || hasServerCredentials();
+}
+
+/** Reads the browser-supplied key from the request, if any. Never log the result. */
+export function keyFromRequest(req: Request): string | undefined {
+  const k = req.headers.get(KEY_HEADER)?.trim();
+  return k && k.length >= 20 && k.length <= 512 && !/\s/.test(k) ? k : undefined;
+}
+
+export const NO_KEY_MESSAGE =
+  "No API key available. Add your Anthropic API key on the start page (it stays in this browser), or set ANTHROPIC_API_KEY on the server.";
 
 /** Web search grounding is on unless explicitly disabled (or unavailable in the deploy environment). */
 export function webSearchEnabled(): boolean {

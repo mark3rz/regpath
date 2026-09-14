@@ -172,3 +172,7 @@ body {
   color: #1565d8;
   white-space: nowrap;
 }
+.badge-inline.warn {
+  background: #fff1cc;
+  color: #b27b00;
+}

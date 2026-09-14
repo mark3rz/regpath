@@ -2,6 +2,8 @@
 
 import { useRef, useState } from "react";
 import type { Intake } from "@/lib/schema";
+import { keyHeaders } from "@/lib/client-key";
+import ApiKeyPanel from "@/components/ApiKeyPanel";
 
 interface Props {
   onDone: (intake: Intake | null, pitchText: string) => void;
@@ -31,7 +33,7 @@ export default function IntakeForm({ onDone, onLoadSample, onLoadPlan, error, se
       const fd = new FormData();
       fd.append("text", text);
       if (file) fd.append("file", file);
-      const res = await fetch("/api/intake", { method: "POST", body: fd });
+      const res = await fetch("/api/intake", { method: "POST", body: fd, headers: keyHeaders() });
       const j = await res.json();
       if (!res.ok) throw new Error(j.error || `Intake failed (${res.status})`);
       onDone(j.intake, j.pitchText ?? text);
@@ -97,6 +99,7 @@ export default function IntakeForm({ onDone, onLoadSample, onLoadPlan, error, se
       </div>
 
       <aside className="flex flex-col gap-4">
+        <ApiKeyPanel />
         <div className="card p-5">
           <div className="eyebrow">WHAT HAPPENS NEXT</div>
           <ol className="mt-2 list-decimal space-y-2 pl-4 text-[0.78rem]">
@@ -115,7 +118,7 @@ export default function IntakeForm({ onDone, onLoadSample, onLoadPlan, error, se
           </ol>
         </div>
         <div className="card p-5">
-          <div className="eyebrow">NO API KEY HANDY?</div>
+          <div className="eyebrow">WITHOUT A KEY</div>
           <p className="mt-2 text-[0.78rem] text-ink-soft">See the finished output first with the sample map, or reopen a plan you downloaded earlier.</p>
           <div className="mt-3 flex flex-col gap-2">
             <button className="btn btn-ghost justify-center" onClick={onLoadSample}>

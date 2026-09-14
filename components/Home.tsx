@@ -12,6 +12,7 @@ import QuestionFlow from "@/components/QuestionFlow";
 import GenerationProgress, { type ProgressLine } from "@/components/GenerationProgress";
 import PathwayMap from "@/components/PathwayMap";
 import Shell from "@/components/Shell";
+import { keyHeaders } from "@/lib/client-key";
 
 type Step = "intake" | "questions" | "generating" | "map";
 
@@ -79,7 +80,7 @@ export default function Home() {
     try {
       const res = await fetch("/api/generate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...keyHeaders() },
         body: JSON.stringify({ intake: s.intake, answers, pitchText: s.pitchText, previousPlan: s.plan }),
         signal: controller.signal,
       });

@@ -49,15 +49,19 @@ the Netherlands.
 
 ```bash
 npm install
-cp .env.example .env.local     # then put your key in ANTHROPIC_API_KEY
 npm run dev                    # http://localhost:3000
 ```
+
+Then add your Anthropic API key in the **Your Anthropic API key** panel on the start page. It is stored only in that browser's
+`localStorage`, sent as a request header to this app's own API routes, used for that one request, and never persisted or logged
+server-side. **Test key** verifies it with a single Models API call. Alternatively, set `ANTHROPIC_API_KEY` in `.env.local` (copy
+`.env.example`) and leave the panel empty — a browser-supplied key always takes precedence over the server's.
 
 Environment variables (see [`.env.example`](.env.example)):
 
 | Variable             | Required | Purpose                                                                                   |
 | -------------------- | -------- | ----------------------------------------------------------------------------------------- |
-| `ANTHROPIC_API_KEY`  | yes      | Your Anthropic API key. Never hardcoded; read server-side only.                           |
+| `ANTHROPIC_API_KEY`  | no*      | Server fallback key. *Not needed if users supply their own key in the start-page panel.    |
 | `REGPATH_MODEL`      | no       | Model id for every call. Default `claude-opus-5`.                                         |
 | `REGPATH_EFFORT`     | no       | Generation effort `low`…`max`. Default `high`; see *Run time* before lowering.             |
 | `REGPATH_WEB_SEARCH` | no       | `off` disables live web search; every named body / URL is then labelled *unverified*.     |

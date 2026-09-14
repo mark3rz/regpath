@@ -1,7 +1,8 @@
+import Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
 import { deckFromFile } from "@/lib/extract";
 import { parseIntake } from "@/lib/intake";
-import { hasCredentials } from "@/lib/anthropic";
+import { hasCredentials, keyFromRequest, NO_KEY_MESSAGE } from "@/lib/anthropic";
 import { sampleIntake } from "@/lib/sample-plan";
 
 export const runtime = "nodejs";
@@ -24,12 +25,14 @@ export async function POST(req: Request) {
     if (process.env.REGPATH_MOCK === "1") {
       return NextResponse.json({ intake: sampleIntake(), pitchText, mock: true });
     }
-    if (!hasCredentials()) {
-      return NextResponse.json({ error: "ANTHROPIC_API_KEY is not set on the server. Add it to .env.local (see .env.example)." }, { status: 500 });
-    }
-    const intake = await parseIntake(text, deck);
+    const apiKey = keyFromRequest(req);
+    if (!hasCredentials(apiKey)) return NextResponse.json({ error: NO_KEY_MESSAGE }, { status: 401 });
+    const intake = await parseIntake(text, deck, apiKey);
     return NextResponse.json({ intake, pitchText });
   } catch (err) {
+    if (err instanceof Anthropic.AuthenticationError) {
+      return NextResponse.json({ error: "Your API key was rejected (invalid or revoked). Check it in the key panel." }, { status: 401 });
+    }
     const message = err instanceof Error ? err.message : "Intake parsing failed.";
     return NextResponse.json({ error: message }, { status: 500 });
   }
