@@ -109,21 +109,22 @@ hosted serverless limit (Vercel: 300 s Hobby, 800 s Pro with Fluid Compute). Opt
 2. **`REGPATH_EFFORT=medium`** on hosted deploys — shorter thinking and terser nodes; measure before relying on it.
 3. Move generation to a background job (a queue + polling endpoint) — the right fix for a shared deployment, not built in v1.
 
-## Deploy to Vercel
+## Deploy (so others can use it)
 
-```bash
-npm i -g vercel
-vercel login
-vercel                      # first deploy (preview)
-vercel env add ANTHROPIC_API_KEY production
-vercel --prod
-```
+A full research run takes ~20 minutes, so the app must run as a long-lived server, **not** on a serverless host with a
+function time limit (Vercel cuts requests off at 5 min on Hobby / ~13 min on Pro). Any host that runs `npm start` works —
+Railway, Render, Fly.io. Railway, step by step:
 
-Or import the repo in the Vercel dashboard and add `ANTHROPIC_API_KEY` under *Settings → Environment Variables*.
+1. Push this repo to GitHub (private is fine).
+2. [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub repo** → pick the repo. `railway.json` pins the
+   build (`npm ci && npm run build`) and start (`npm start`) commands; Next.js reads Railway's `PORT` automatically.
+3. **Settings → Networking → Generate Domain** to get a public URL.
+4. **Variables** (all optional): `ANTHROPIC_API_KEY` if you want pitch parsing to work for users who haven't entered a key yet
+   (research always needs the user's own key); `REGPATH_EFFORT`, `REGPATH_WEB_SEARCH` as documented above.
+5. Share the URL. Each user pastes their own Anthropic API key in the panel on the start page — it stays in their browser and
+   a full run is billed to their account (roughly $2–5 at default effort).
 
-`app/api/generate/route.ts` sets `maxDuration = 300`, the Fluid Compute ceiling on Hobby (Pro allows 800). Read **Run time** above
-before relying on a hosted deploy for full generations: at default effort a full run exceeds these limits. Set `REGPATH_EFFORT=medium`
-on the deployment, or keep generation local.
+The generation stream sends a keepalive line every 15 s so reverse proxies don't drop the long-running response.
 
 ## Data schema
 
