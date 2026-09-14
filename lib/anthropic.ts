@@ -48,6 +48,13 @@ export function keyFromRequest(req: Request): string | undefined {
 export const NO_KEY_MESSAGE =
   "No API key available. Add your Anthropic API key on the start page (it stays in this browser), or set ANTHROPIC_API_KEY on the server.";
 
+/**
+ * Research + map generation never falls back to the server's key: it is the
+ * expensive, long-running step and is always billed to the user's own key.
+ */
+export const RESEARCH_KEY_MESSAGE =
+  "Failed to run: Anthropic API key not input. Add your own API key (it stays in this browser) and run again to receive the research and strategy map.";
+
 /** Web search grounding is on unless explicitly disabled (or unavailable in the deploy environment). */
 export function webSearchEnabled(): boolean {
   return (process.env.REGPATH_WEB_SEARCH || "on").toLowerCase() !== "off";

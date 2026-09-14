@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { Answers, Intake } from "@/lib/schema";
 import { answersComplete, buildQuestions, type Question } from "@/lib/questions";
+import ApiKeyPanel from "@/components/ApiKeyPanel";
 
 interface Props {
   intake: Intake | null;
@@ -116,6 +117,10 @@ export default function QuestionFlow({ intake, initial, hasPlan, error, onBack, 
       </div>
 
       <aside className="flex flex-col gap-4">
+        <ApiKeyPanel
+          eyebrow="STEP 3 NEEDS YOUR OWN KEY"
+          note="Running the research and building the strategy map is always billed to a key you enter here — it never uses a key configured on the server. Parsing your pitch may have used the server's key."
+        />
         {intake && (
           <div className="card p-5">
             <div className="eyebrow">WHAT WE READ FROM YOUR PITCH</div>

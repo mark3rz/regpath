@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { AnswersSchema, IntakeSchema, PlanSchema } from "@/lib/schema";
 import { generatePlan, type ProgressEvent } from "@/lib/generate";
 import { checkPlan } from "@/lib/graph";
-import { hasCredentials, keyFromRequest, NO_KEY_MESSAGE } from "@/lib/anthropic";
+import { keyFromRequest, RESEARCH_KEY_MESSAGE } from "@/lib/anthropic";
 import { samplePlan } from "@/lib/sample-plan";
 import { z } from "zod";
 
@@ -28,9 +28,10 @@ export async function POST(req: Request) {
   if (!parsed.success) return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   const body = parsed.data;
 
+  // Research runs only on the user's own key — never the server fallback.
   const apiKey = keyFromRequest(req);
-  if (process.env.REGPATH_MOCK !== "1" && !hasCredentials(apiKey)) {
-    return NextResponse.json({ error: NO_KEY_MESSAGE }, { status: 401 });
+  if (process.env.REGPATH_MOCK !== "1" && !apiKey) {
+    return NextResponse.json({ error: RESEARCH_KEY_MESSAGE }, { status: 401 });
   }
 
   const encoder = new TextEncoder();

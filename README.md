@@ -54,14 +54,22 @@ npm run dev                    # http://localhost:3000
 
 Then add your Anthropic API key in the **Your Anthropic API key** panel on the start page. It is stored only in that browser's
 `localStorage`, sent as a request header to this app's own API routes, used for that one request, and never persisted or logged
-server-side. **Test key** verifies it with a single Models API call. Alternatively, set `ANTHROPIC_API_KEY` in `.env.local` (copy
-`.env.example`) and leave the panel empty — a browser-supplied key always takes precedence over the server's.
+server-side. **Test key** verifies it with a single Models API call.
+
+Two steps, two rules:
+
+| Step | Key used |
+| --- | --- |
+| Pitch parsing (`/api/intake`) | The browser key if present, else the server's `ANTHROPIC_API_KEY` fallback. |
+| Research + strategy map (`/api/generate`) | **Only** a browser-supplied key. With none, the run fails with *"Failed to run: Anthropic API key not input…"* — the server key is never used for this step. |
+
+Set `ANTHROPIC_API_KEY` in `.env.local` (copy `.env.example`) if you want parsing to work for users who haven't entered a key yet.
 
 Environment variables (see [`.env.example`](.env.example)):
 
 | Variable             | Required | Purpose                                                                                   |
 | -------------------- | -------- | ----------------------------------------------------------------------------------------- |
-| `ANTHROPIC_API_KEY`  | no*      | Server fallback key. *Not needed if users supply their own key in the start-page panel.    |
+| `ANTHROPIC_API_KEY`  | no       | Server fallback for pitch parsing only. Research/map generation always needs the user's key. |
 | `REGPATH_MODEL`      | no       | Model id for every call. Default `claude-opus-5`.                                         |
 | `REGPATH_EFFORT`     | no       | Generation effort `low`…`max`. Default `high`; see *Run time* before lowering.             |
 | `REGPATH_WEB_SEARCH` | no       | `off` disables live web search; every named body / URL is then labelled *unverified*.     |

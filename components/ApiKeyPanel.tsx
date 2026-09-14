@@ -10,7 +10,7 @@ type Check = { state: "idle" } | { state: "testing" } | { state: "ok"; source: "
  * only, attached as a header to this app's own API calls, used server-side for
  * that request, and never stored or logged there.
  */
-export default function ApiKeyPanel() {
+export default function ApiKeyPanel({ eyebrow = "YOUR ANTHROPIC API KEY", note }: { eyebrow?: string; note?: string }) {
   // Rendered client-only (Home is loaded with ssr:false), so localStorage is safe to read in the initializer.
   const [stored, setStored] = useState(() => getStoredKey());
   const [draft, setDraft] = useState("");
@@ -53,7 +53,7 @@ export default function ApiKeyPanel() {
   return (
     <div className="card p-5">
       <div className="flex items-baseline justify-between">
-        <div className="eyebrow">YOUR ANTHROPIC API KEY</div>
+        <div className="eyebrow">{eyebrow}</div>
         {stored ? <span className="badge-inline">saved on this device</span> : <span className="badge-inline warn">not set</span>}
       </div>
 
@@ -91,7 +91,7 @@ export default function ApiKeyPanel() {
             <button className="btn" type="button" onClick={save} disabled={!draft.trim()}>
               Save key on this device
             </button>
-            <button className="btn btn-ghost" type="button" onClick={test} title="Checks whether the server has its own key configured">
+            <button className="btn btn-ghost" type="button" onClick={test} title="Checks whether the server has a fallback key for pitch parsing">
               Check server key
             </button>
           </div>
@@ -100,21 +100,22 @@ export default function ApiKeyPanel() {
 
       {check.state === "ok" && (
         <p className="mt-3 rounded-[2px] border border-[#BFE8D2] bg-[#DFF7EA] px-3 py-2 text-[0.74rem] text-[#0E9A5C]">
-          Key works{check.source === "server" ? " — using the key configured on the server" : ""}.
+          {check.source === "server" ? "The server has a fallback key for pitch parsing — research still needs your own key." : "Key works."}
         </p>
       )}
       {check.state === "fail" && (
         <p className="mt-3 rounded-[2px] border border-[#F3B4B4] bg-[#FFEDED] px-3 py-2 text-[0.74rem] text-[#D64545]">{check.message}</p>
       )}
 
+      {note && <p className="mt-3 text-[0.74rem] leading-relaxed text-ink">{note}</p>}
       <p className="mt-3 text-[0.72rem] leading-relaxed text-ink-soft">
         Stored only in this browser (localStorage) — never in a database or a log. It is sent to this app&apos;s own server with each request,
-        used for that request, then discarded. The key is billed to your Anthropic account; get one at{" "}
+        used for that request, then discarded. <strong>Research and the strategy map always run on this key</strong>; parsing your pitch can
+        fall back to a key configured on the server. Billed to your Anthropic account; get one at{" "}
         <a className="text-brand underline" href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer">
           console.anthropic.com
         </a>
-        .{serverHasKey === false && " No key is configured on the server, so one is required here."}
-        {!stored && serverHasKey === null && " If the server already has a key configured, you can leave this empty."}
+        .{serverHasKey === false && " No key is configured on the server, so parsing needs one here too."}
       </p>
     </div>
   );
