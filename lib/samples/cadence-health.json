@@ -1,0 +1,1264 @@
+{
+  "company": "Cadence Health",
+  "product": "Cadence Loop — post-discharge heart-failure monitoring (adhesive biosensor patch + app)",
+  "headline": "A worked example: home-market filing in Singapore alongside EU CE marking and country-specific launches in Germany and Spain. Built on real regulatory sources for a fictional post-discharge heart-failure monitoring product. Click any step for sources, contacts, and a week-by-week breakdown.",
+  "readme": [
+    "<strong>Cadence Health and its product, Cadence Loop, are fictional</strong> — a teaching example, not a real company or a real client's strategy. The regulatory mechanics, standards, deadlines, comparators, and named organizations underneath it are real and independently sourced.",
+    "<strong>One CE certificate covers the whole EU.</strong> Once TÜV SÜD (or any MDR Notified Body) issues the CE mark, Cadence Loop can legally be sold in Germany and Spain too — there's no separate German or Spanish device certification. Almost everything in those two lanes sits downstream of one node: <strong>EU6, CE certificate issued.</strong>",
+    "<strong>What stays country-specific</strong> is getting paid (BfArM's DiGA Fast-Track in Germany, AEMPS/regional HTA review in Spain), national data-protection and security bars (BSI TR-03161 in Germany, AEPD/LOPDGDD in Spain), and, only if a trial runs physically inside that country, that country's own ethics review — no German or Spanish trial site is currently planned.",
+    "<strong>Steps flagged \"Decision\" mark items that need CEO-level sign-off</strong> — genuine strategic forks, as distinct from steps a regulatory team can simply execute.",
+    "<strong>Gold lane = Evidence &amp; Partnerships</strong> — clinical champions, hospital pilots, and the eventual publication, plus the hospital IT/procurement sign-off that a CE mark or SMDR listing alone doesn't guarantee.",
+    "<strong>Biocompatibility (ISO 10993) is in scope here</strong> — unlike a pure touchscreen app, Cadence Loop includes a disposable adhesive skin sensor, which is direct, limited-duration patient contact and does trigger biological evaluation (SH8)."
+  ],
+  "lanes": [
+    {
+      "id": "shared",
+      "name": "Shared Standards",
+      "note": "Reused across all three regimes",
+      "kind": "shared"
+    },
+    {
+      "id": "evidence",
+      "name": "Evidence & Partnerships",
+      "note": "Hospitals, clinicians, publications — feeds every dossier",
+      "kind": "evidence"
+    },
+    {
+      "id": "sg",
+      "name": "Singapore",
+      "note": "Home market — HSA registration relies on the EU CE certificate as reference approval",
+      "kind": "home"
+    },
+    {
+      "id": "eu",
+      "name": "European Union",
+      "note": "CE marking is the critical-path gate for the whole EU market",
+      "kind": "eu"
+    },
+    {
+      "id": "de",
+      "name": "Germany",
+      "note": "DiGA reimbursement track — blocked on the EU CE mark and on a classification-eligibility decision",
+      "kind": "country"
+    },
+    {
+      "id": "es",
+      "name": "Spain",
+      "note": "Reimbursement track only — blocked on the EU CE mark; decentralized regional review",
+      "kind": "country"
+    }
+  ],
+  "phases": [
+    {
+      "n": 1,
+      "title": "Start Now"
+    },
+    {
+      "n": 2,
+      "title": "Building the File"
+    },
+    {
+      "n": 3,
+      "title": "NB Review & Certification"
+    },
+    {
+      "n": 4,
+      "title": "Post-CE: Market & Reimbursement"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "SH1",
+      "lane": "shared",
+      "phase": 1,
+      "title": "Lock MDR classification & intended-use statement",
+      "duration": 1,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": true,
+      "keystone": true,
+      "keystoneNote": "Foundation for downstream lanes",
+      "desc": "Cadence Loop pairs a disposable adhesive biosensor patch with an app that flags likely early decompensation after a heart-failure hospital discharge and prompts care-team outreach. Under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32017R0745\" target=\"_blank\" rel=\"noopener\">MDR Annex VIII, Rule 11</a>, software that provides information used to take decisions with diagnosis or therapeutic purposes is Class IIa by default, stepping up to Class IIb if it could lead to a serious deterioration of health if the information is wrong or delayed — plausible here, since a missed decompensation signal in a recently discharged HF patient is exactly that kind of harm. This determination decides which lanes activate downstream, including whether Germany's DiGA route is even reachable (see DE1) — worth stress-testing rather than assuming.",
+      "deps": [],
+      "micro": [
+        {
+          "title": "Draft the intended-use / indications-for-use statement",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Map the alerting logic against Rule 11 examples with outside regulatory counsel",
+          "time": "Now",
+          "detail": "Test whether a more conservative \"decision-support, physician-confirms\" framing could hold at Class IIa instead of IIb.",
+          "now": true
+        },
+        {
+          "title": "Internal sign-off from regulatory + clinical leads",
+          "time": "Week 2",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Document the classification rationale for the technical file",
+          "time": "Week 2",
+          "detail": "Feeds EU3 and EU1.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SH2",
+      "lane": "shared",
+      "phase": 1,
+      "title": "Appoint EU Authorized Representative & confirm legal manufacturer",
+      "duration": 1,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A non-EU manufacturer needs an EU-based Authorized Representative under MDR Article 11 before any Notified Body engagement can formalize.",
+      "deps": [],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SH3",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Build & certify ISO 13485 QMS",
+      "duration": 4,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Quality Management System certification, required by every MDR Notified Body and referenced directly in Singapore's HSA technical file. Official standard: <a href=\"https://www.iso.org/standard/59752.html\" target=\"_blank\" rel=\"noopener\">ISO 13485:2016 (iso.org)</a>.",
+      "deps": [
+        "SH2"
+      ],
+      "micro": [
+        {
+          "title": "Gap analysis against ISO 13485 clauses",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Write core QMS procedures",
+          "time": "Month 1–3",
+          "detail": "Document control, CAPA, design controls, supplier management for both the patch and the app.",
+          "now": false
+        },
+        {
+          "title": "Internal audit & management review",
+          "time": "Month 3–4",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Certification audit (Stage 1 + Stage 2)",
+          "time": "Month 4–6",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "ISO 13485 certificate issued",
+          "time": "Month 6",
+          "detail": "Feeds EU3.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SH4",
+      "lane": "shared",
+      "phase": 2,
+      "title": "IEC 62304 software lifecycle file",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Software development lifecycle documentation for the alerting algorithm. Official standard: <a href=\"https://www.iso.org/standard/38421.html\" target=\"_blank\" rel=\"noopener\">IEC 62304:2006 (iso.org, dual ISO/IEC logo)</a>.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": [
+        {
+          "title": "Determine software safety classification (Class A/B/C)",
+          "time": "Now",
+          "detail": "Likely Class B or C given the clinical decompensation-alert use case.",
+          "now": true
+        },
+        {
+          "title": "Software development plan & architecture documentation",
+          "time": "Month 1–3",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "SOUP inventory & risk assessment",
+          "time": "Month 2–3",
+          "detail": "Any third-party ECG-processing or ML libraries get flagged and risk-assessed here.",
+          "now": false
+        },
+        {
+          "title": "Verification & validation testing",
+          "time": "Month 3–6",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Software lifecycle file compiled",
+          "time": "Feeds EU3",
+          "detail": "",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SH5",
+      "lane": "shared",
+      "phase": 2,
+      "title": "ISO 14971 risk management file",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Hazard analysis spanning the patch, the Bluetooth link, and the alerting algorithm together, not each in isolation. Official standard: <a href=\"https://www.iso.org/standard/72704.html\" target=\"_blank\" rel=\"noopener\">ISO 14971:2019 (iso.org)</a>.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": [
+        {
+          "title": "Hazard identification workshop across hardware, connectivity, and software",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Risk estimation & evaluation",
+          "time": "Month 1–2",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Implement & verify risk controls",
+          "time": "Month 2–4",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Residual risk / benefit-risk sign-off",
+          "time": "Month 4",
+          "detail": "Feeds EU3.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SH6",
+      "lane": "shared",
+      "phase": 2,
+      "title": "IEC 62366-1 usability engineering file",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Use-related risk analysis. The primary user population is recently discharged, often elderly, cardiac patients and their caregivers — a distinct usability risk profile from a younger or clinician-only user base. Official standard: <a href=\"https://www.iso.org/standard/63179.html\" target=\"_blank\" rel=\"noopener\">IEC 62366-1:2015 (iso.org)</a>.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": [
+        {
+          "title": "Define use scenarios for patients, caregivers, and remote care-team staff",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Formative usability studies, including patch self-application by an elderly user",
+          "time": "Month 1–2",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Summative usability validation study",
+          "time": "Month 3–4",
+          "detail": "",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SH7",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Cybersecurity technical documentation",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A wireless patch-to-phone-to-cloud link carrying continuous cardiac data needs its own cybersecurity file, referenced by MDR technical documentation and separately required in near-identical form by Germany's BSI TR-03161 (see DE4) and Singapore's HSA cybersecurity guidance.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": [
+        {
+          "title": "Threat modeling & attack-surface analysis across patch, app, and cloud",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Secure development & update-management documentation",
+          "time": "Month 1–3",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Penetration testing",
+          "time": "Month 3–4",
+          "detail": "Reusable as the technical basis for DE4.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SH8",
+      "lane": "shared",
+      "phase": 2,
+      "title": "ISO 10993 biocompatibility testing for the adhesive patch",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Unlike a pure app on commercial hardware, Cadence Loop's disposable patch is direct, limited-duration (surface, &lt;24h) skin contact — this does trigger biological evaluation, where a touchscreen-only product would not. Official standard: <a href=\"https://www.iso.org/standard/10993-1\" target=\"_blank\" rel=\"noopener\">ISO 10993-1:2025 (iso.org)</a>.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": [
+        {
+          "title": "Chemical characterization of the adhesive and patch substrate",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Select endpoints per ISO 10993-1 Annex A for limited-duration surface contact",
+          "time": "Month 1",
+          "detail": "Cytotoxicity and irritation/sensitization are the likely minimum set.",
+          "now": false
+        },
+        {
+          "title": "Run biocompatibility testing",
+          "time": "Month 1–4",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Biocompatibility rationale compiled",
+          "time": "Feeds EU3",
+          "detail": "",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SH9",
+      "lane": "shared",
+      "phase": 2,
+      "title": "EU AI Act high-risk readiness file",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "If the decompensation-alerting logic uses machine learning, it is high-risk AI under the AI Act as a safety component embedded in an MDR Class IIa/IIb/III device. The Digital Omnibus on AI (Regulation (EU) 2026/1744, in force since 27 July 2026) pushed this Annex I compliance deadline from 2 August 2027 to <strong>2 August 2028</strong> — later than earlier trackers assumed, but the underlying obligations are unchanged, and MDR obligations were not affected by the deferral.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": [
+        {
+          "title": "Confirm whether the alerting logic qualifies as an AI system under the Act's definition",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Map AI Act Annex III technical documentation against the existing MDR file to avoid duplication",
+          "time": "Month 1–2",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Build toward the 2 August 2028 deadline",
+          "time": "Ongoing",
+          "detail": "Materially less urgent than the pre-Omnibus timeline, but not optional.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EV1",
+      "lane": "evidence",
+      "phase": 1,
+      "title": "Engage heart-failure clinical champions",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Named cardiologists and heart-failure program directors at pilot hospitals lend credibility to trial design, speed hospital adoption, and often become co-authors on the eventual publication.",
+      "deps": [],
+      "micro": [
+        {
+          "title": "Identify target champions at Boston- and Singapore-area heart-failure programs",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Formalize advisory or co-investigator roles",
+          "time": "Month 1–2",
+          "detail": "Clarify authorship expectations up front.",
+          "now": false
+        },
+        {
+          "title": "Extend to German and Spanish hospital contacts",
+          "time": "Ongoing",
+          "detail": "For post-CE pilot conversations, not for a local trial.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EV2",
+      "lane": "evidence",
+      "phase": 1,
+      "title": "Build hospital discharge-pathway pilot pipeline",
+      "duration": 3,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Paid or research pilots embedded in hospital discharge workflows strengthen the eventual clinical evaluation and create natural reimbursement champions in Germany and Spain.",
+      "deps": [],
+      "micro": [
+        {
+          "title": "Formalize pilot agreements at Boston and Singapore sites",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Open conversations at target German and Spanish cardiology centers",
+          "time": "Month 1–6",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Convert pilots into structured data-collection sites",
+          "time": "Ongoing",
+          "detail": "Feeds EU4 and both reimbursement dossiers.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EV3",
+      "lane": "evidence",
+      "phase": 1,
+      "title": "Run pivotal readmission-reduction trial",
+      "duration": 4,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "Foundation for downstream lanes",
+      "desc": "RCT-grade trial run at Boston and Singapore sites — the sole clinical evidence source, since no German or Spanish trial site is currently planned. This single trial feeds the EU Clinical Evaluation Report (EU4) and the eventual publication (EV5), which itself strengthens the German DiGA evidence file and the Spanish HTA dossiers.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": [
+        {
+          "title": "Finalize trial design & endpoints (30-day readmission, time-to-alert)",
+          "time": "Now",
+          "detail": "Align endpoints with the eventual EU Clinical Evaluation Plan before design is locked.",
+          "now": true
+        },
+        {
+          "title": "Trial registry registration",
+          "time": "Before enrollment",
+          "detail": "Strengthens evidentiary weight for the EU CER later.",
+          "now": false
+        },
+        {
+          "title": "Enrollment & follow-up",
+          "time": "Month 3–18",
+          "detail": "",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EV4",
+      "lane": "evidence",
+      "phase": 1,
+      "title": "Confirm trial design meets ISO 14155:2026 GCP",
+      "duration": 1,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "ISO 14155 was substantially revised in 2026 (fourth edition, replacing the 2020 version, with no defined transition period) with stronger requirements on residual risk assessment, safety-event reporting, and estimands. Registry registration alone is not the same as demonstrating GCP compliance — this is what a Notified Body actually checks before accepting trial data as CER evidence. Official standard: <a href=\"https://www.iso.org/standard/83968.html\" target=\"_blank\" rel=\"noopener\">ISO 14155:2026 (iso.org)</a>.",
+      "deps": [],
+      "micro": [
+        {
+          "title": "Audit the trial protocol against the 2026 (fourth) edition specifically, not the superseded 2020 text",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Confirm monitoring, informed consent & adverse-event reporting meet the current standard",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Document GCP compliance for the CER dossier",
+          "time": "Ongoing",
+          "detail": "",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EV5",
+      "lane": "evidence",
+      "phase": 2,
+      "title": "Publish trial results in a peer-reviewed cardiology journal",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A published, well-designed trial becomes literature-based evidence in the EU CER and strengthens both the German DiGA \"positive healthcare effect\" (pVE) evidence bar and the Spanish HTA dossiers — one publication serving several filings.",
+      "deps": [
+        "EV3",
+        "EV1"
+      ],
+      "micro": [
+        {
+          "title": "Select target journal & pre-register statistical plan",
+          "time": "Now — before the trial completes",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Draft manuscript alongside trial completion",
+          "time": "As data matures",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Peer review & publication",
+          "time": "Post-trial + several months",
+          "detail": "Timeline is journal-dependent and not fully controllable.",
+          "now": false
+        },
+        {
+          "title": "Feed published findings into the CER and both reimbursement dossiers",
+          "time": "On publication",
+          "detail": "",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EV6",
+      "lane": "evidence",
+      "phase": 4,
+      "title": "Hospital IT / biomedical engineering & procurement sign-off",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Regulatory approval (CE mark, SMDR listing) does not guarantee a hospital will let a continuously connected cardiac device onto its network. Each hospital runs its own biomedical engineering and IT security review before deployment.",
+      "deps": [
+        "EU6",
+        "SG4"
+      ],
+      "micro": [
+        {
+          "title": "Start informal conversations with hospital biomed/IT teams",
+          "time": "Now — well before formal approval",
+          "detail": "At existing pilot sites and target institutions alike.",
+          "now": true
+        },
+        {
+          "title": "Share cybersecurity (SH7) documentation early",
+          "time": "As it becomes available",
+          "detail": "Reduces surprises at formal review.",
+          "now": false
+        },
+        {
+          "title": "Formal procurement & IT security sign-off",
+          "time": "Post-CE, per hospital",
+          "detail": "Needed at each hospital individually, not once for the whole market.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SG1",
+      "lane": "sg",
+      "phase": 1,
+      "title": "Appoint Singapore Registrant",
+      "duration": 1,
+      "risk": "low",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A Singapore-based Registrant is the legal entity that submits and holds the SMDR registration, per HSA's GN-15 guidance.",
+      "deps": [],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SG2",
+      "lane": "sg",
+      "phase": 1,
+      "title": "Confirm HSA classification (GN-15)",
+      "duration": 1,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Singapore's device classes broadly mirror the EU/GHTF scheme; a Class IIb-equivalent MDR classification typically maps to HSA Class C.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SG3",
+      "lane": "sg",
+      "phase": 3,
+      "title": "File under the Abridged Evaluation Route, referencing the EU CE certificate",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "HSA's Abridged Evaluation Route accepts prior approval from a recognized reference agency — the EU notified-body/CE system, US FDA, Health Canada, Australia's TGA, or Japan's PMDA — to reduce the scope of the technical dossier and shorten review to roughly 100–220 working days instead of a full technical review. HSA guidance (GN-15, Annex 2) confirms EU CE marking as an accepted reference approval. Source: <a href=\"https://www.hsa.gov.sg/medical-devices/registration/guides/class-d-abridged-registration\" target=\"_blank\" rel=\"noopener\">HSA abridged registration guidance (hsa.gov.sg)</a>.",
+      "deps": [
+        "EU6",
+        "SG1",
+        "SG2"
+      ],
+      "micro": [
+        {
+          "title": "Assemble the abridged dossier referencing the CE certificate",
+          "time": "On CE issuance",
+          "detail": "The labelled use must be identical to what was approved in the EU.",
+          "now": false
+        },
+        {
+          "title": "Submit to HSA",
+          "time": "Week 1 post-CE",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "HSA review",
+          "time": "~100–220 working days",
+          "detail": "Faster than a Full Evaluation Route filed without reference-market backing.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SG4",
+      "lane": "sg",
+      "phase": 3,
+      "title": "SMDR listing granted",
+      "duration": 1,
+      "risk": "low",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Listing on the Singapore Medical Device Register is the legal precondition for commercial sale.",
+      "deps": [
+        "SG3"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "SG5",
+      "lane": "sg",
+      "phase": 4,
+      "title": "MediSave / Integrated Shield Plan coverage engagement",
+      "duration": 3,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Coverage under Singapore's national and private insurance schemes is a separate commercial conversation from SMDR listing, typically opened once listing is secured and pilot outcomes data exists.",
+      "deps": [
+        "SG4"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU1",
+      "lane": "eu",
+      "phase": 1,
+      "title": "Classification pre-submission meeting with a Notified Body",
+      "duration": 1,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "An early, informal classification discussion before formally engaging a Notified Body reduces the risk of a rejected or delayed application later.",
+      "deps": [
+        "SH1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU2",
+      "lane": "eu",
+      "phase": 1,
+      "title": "Engage TÜV SÜD Product Service (NB 0123) as Notified Body",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "TÜV SÜD Product Service GmbH (Germany) holds one of only two MDR designations covering all 71 designation codes (the other is BSI Group Netherlands, NB 2797), making it a broad-scope, German-based choice — practical for a filing that also needs to feed the German DiGA track. Verify current scope and queue on the European Commission's NANDO database before committing: <a href=\"https://ec.europa.eu/growth/tools-databases/nando/\" target=\"_blank\" rel=\"noopener\">NANDO (ec.europa.eu)</a>. As of 2026, MDR Notified Body queues run 13–18 months from application acceptance to certificate issuance industry-wide, so the choice of NB affects timeline more than final outcome.",
+      "deps": [
+        "EU1"
+      ],
+      "micro": [
+        {
+          "title": "Request pre-submission queue estimates from 2–3 broad-scope NBs (TÜV SÜD, BSI, DEKRA)",
+          "time": "Now",
+          "detail": "",
+          "now": true
+        },
+        {
+          "title": "Confirm NB has relevant SaMD / connected-cardiac-device audit experience",
+          "time": "Week 1–2",
+          "detail": "",
+          "now": false
+        },
+        {
+          "title": "Sign engagement agreement",
+          "time": "Month 1",
+          "detail": "",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU3",
+      "lane": "eu",
+      "phase": 2,
+      "title": "Compile MDR technical documentation (Annex II/III)",
+      "duration": 4,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Assembles the QMS, software, risk-management, usability, cybersecurity, and biocompatibility files into one submission-ready technical file.",
+      "deps": [
+        "SH3",
+        "SH4",
+        "SH5",
+        "SH6",
+        "SH7",
+        "SH8"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU4",
+      "lane": "eu",
+      "phase": 2,
+      "title": "Clinical Evaluation Report compiled",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Draws on the pivotal trial (EV3/EV4), literature on comparable heart-failure remote-monitoring devices, and post-market data plans. A preliminary CER built on literature can start now; the final version needs the trial data to mature.",
+      "deps": [
+        "EV3",
+        "EV4"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU5",
+      "lane": "eu",
+      "phase": 3,
+      "title": "Notified Body technical file review & audit",
+      "duration": 4,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "Foundation for downstream lanes",
+      "desc": "Industry-wide MDR review times of 13–18 months from acceptance to certificate issuance are the dominant driver of Cadence's overall timeline — longer than the trial itself in most planning scenarios.",
+      "deps": [
+        "EU2",
+        "EU3",
+        "EU4"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU6",
+      "lane": "eu",
+      "phase": 3,
+      "title": "CE certificate issued",
+      "duration": 1,
+      "risk": "low",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "Foundation for downstream lanes",
+      "desc": "The single node that unlocks Singapore's abridged route (SG3), Germany's DiGA filing (DE2), and Spain's AEMPS registration (ES1) simultaneously.",
+      "deps": [
+        "EU5"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU7",
+      "lane": "eu",
+      "phase": 3,
+      "title": "EUDAMED registration & UDI assignment",
+      "duration": 1,
+      "risk": "low",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Required post-certification administrative step; increasingly cross-checked by hospital procurement teams in Germany and Spain during tender evaluation.",
+      "deps": [
+        "EU6"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU8",
+      "lane": "eu",
+      "phase": 4,
+      "title": "EU AI Act conformity documentation finalized",
+      "duration": 4,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Due by 2 August 2028 for AI embedded in an MDR-regulated device (Digital Omnibus, Regulation (EU) 2026/1744). Far less time pressure than the pre-Omnibus 2027 date, but genuinely required, not optional.",
+      "deps": [
+        "EU6",
+        "SH9"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "DE1",
+      "lane": "de",
+      "phase": 1,
+      "title": "Decide: pursue DiGA Fast-Track given IIb classification uncertainty",
+      "duration": 1,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": true,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Germany's DiGA Fast-Track (BfArM, under Section 139e SGB V) has historically been limited to Class I and IIa software devices. From 2026 the scope widens to include \"certain\" low-risk Class IIb digital medical devices — but it is not yet clear a continuous cardiac-alerting device for a serious chronic condition would qualify as \"low-risk\" IIb for this purpose. This is a genuine CEO-level fork: pursue DiGA and risk a rejected application, or plan for slower conventional hospital-procurement entry into Germany instead. Source: <a href=\"https://www.provahealth.com/insights/diga-reimbursement-germany-guide\" target=\"_blank\" rel=\"noopener\">DiGA reimbursement guide (provahealth.com)</a>.",
+      "deps": [
+        "EU1"
+      ],
+      "micro": [
+        {
+          "title": "Commission a BfArM pre-submission advisory consultation on IIb eligibility for this specific use case",
+          "time": "Now",
+          "detail": "BfArM explicitly offers this advisory service to manufacturers before formal filing.",
+          "now": true
+        },
+        {
+          "title": "Decide DiGA vs. conventional hospital-procurement entry",
+          "time": "Month 2–3",
+          "detail": "CEO sign-off required — shapes the whole German go-to-market plan.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "DE2",
+      "lane": "de",
+      "phase": 3,
+      "title": "BfArM DiGA Fast-Track application",
+      "duration": 3,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "BfArM commits to a decision within 90 days of a complete submission under the DiGAV (as amended January 2026).",
+      "deps": [
+        "EU6",
+        "DE1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "DE3",
+      "lane": "de",
+      "phase": 3,
+      "title": "Provisional DiGA Directory listing",
+      "duration": 1,
+      "risk": "low",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Provisional listing (pending final \"positive healthcare effect\" evidence) makes the product prescribable and reimbursable on a trial basis.",
+      "deps": [
+        "DE2"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "DE4",
+      "lane": "de",
+      "phase": 2,
+      "title": "BSI TR-03161 data-security certification",
+      "duration": 3,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Mandatory, DiGA-specific cybersecurity certification against the German Federal Office for Information Security's TR-03161 standard, formally application-relevant since mid-2025. Largely reuses the technical work already done for SH7.",
+      "deps": [
+        "SH7"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "DE5",
+      "lane": "de",
+      "phase": 4,
+      "title": "AbEM real-world outcomes data collection setup",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Since 1 January 2026, at least 20% of a DiGA's negotiated reimbursement must be tied to outcome parameters captured through \"Anwendungsbegleitende Erfolgsmessung\" (application-accompanying success measurement) and reported to BfArM on a fixed semi-annual schedule.",
+      "deps": [
+        "DE3"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "DE6",
+      "lane": "de",
+      "phase": 4,
+      "title": "GKV-SV permanent price negotiation",
+      "duration": 4,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Negotiated with the National Association of Statutory Health Insurance Funds once provisional listing and outcomes data are in place; converts provisional to permanent reimbursement.",
+      "deps": [
+        "DE3",
+        "DE5"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "ES1",
+      "lane": "es",
+      "phase": 3,
+      "title": "AEMPS national product-code registration",
+      "duration": 2,
+      "risk": "low",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Following CE marking, the Spanish Agency for Medicines and Health Products (AEMPS) issues a national product code — the administrative gateway to any Spanish pricing or procurement conversation.",
+      "deps": [
+        "EU6"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "ES2",
+      "lane": "es",
+      "phase": 2,
+      "title": "AEPD / LOPDGDD data-protection compliance file",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Spain's Data Protection Agency (AEPD) enforces GDPR alongside the Spanish Organic Law on Data Protection (LOPDGDD); continuous cardiac monitoring data is special-category health data requiring a documented lawful basis and impact assessment.",
+      "deps": [
+        "SH7"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "ES3",
+      "lane": "es",
+      "phase": 4,
+      "title": "Regional HTA engagement (Catalonia, Madrid, Andalusia, Basque Country)",
+      "duration": 4,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Spain's reimbursement landscape is decentralized: seven regional Health Technology Assessment agencies operate without a single national digital-health benefit category, and adoption depends on local hospital-trust budgets. Catalonia, Madrid, Andalusia, and the Basque Country are the most influential regions and the natural entry sequence.",
+      "deps": [
+        "ES1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "ES4",
+      "lane": "es",
+      "phase": 4,
+      "title": "CIPM national pricing dossier (optional centralized route)",
+      "duration": 4,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A national dossier to the Inter-Ministerial Pricing Commission is possible in parallel with regional HTA engagement, but is a genuinely separate, optional route rather than a required step — worth a deliberate go/no-go rather than pursuing both by default.",
+      "deps": [
+        "ES1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "ES5",
+      "lane": "es",
+      "phase": 1,
+      "title": "CEIm ethics committee approval — only if a Spanish trial site is added",
+      "duration": 2,
+      "risk": "low",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Under Real Decreto 192/2023, any medical device clinical investigation physically conducted in Spain needs a favorable opinion from a Research Ethics Committee for medicinal products (CEIm), running in parallel with any required AEMPS notification. Not currently triggered — no Spanish trial site is planned; this exists on the map only in case that changes.",
+      "deps": [
+        "EV3"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    }
+  ],
+  "warnings": [
+    "Illustrative teaching example — fictional company, built on real regulatory sources. Notified Body designation and standards editions current as of the research date (September 2026); verify live on NANDO and iso.org before relying on them."
+  ],
+  "disclaimer": "Internal strategy tool — not legal advice. Verify with qualified regulatory counsel before acting.",
+  "generatedAt": "2026-09-01T00:00:00.000Z",
+  "webSearchUsed": false
+}

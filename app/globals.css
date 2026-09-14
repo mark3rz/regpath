@@ -1,0 +1,174 @@
+@import "tailwindcss";
+@import "./pathway.css";
+
+@theme inline {
+  --font-sans: var(--font-plex-sans), "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", monospace;
+  --font-serif: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+  --color-brand: #1565d8;
+  --color-brand-soft: #e8f1fe;
+  --color-navy: #050c22;
+  --color-cyan: #18e5ff;
+  --color-ink: #1d2433;
+  --color-ink-soft: #6b7280;
+  --color-line: #e4e7eb;
+  --color-line-soft: #f1f3f5;
+  --color-paper: #fafafb;
+}
+
+html {
+  color-scheme: light;
+}
+body {
+  background: #fafafb;
+  color: #1d2433;
+  font-family: var(--font-plex-sans), "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+/* App shell (intake + questions) — same tokens as the map */
+.shell-header {
+  background: linear-gradient(to right, #050c22 0%, #1565d8 48%, #18e5ff 100%);
+  color: #eaf3ff;
+}
+.shell-footer {
+  background: linear-gradient(to right, #050c22 0%, #1565d8 55%, #18e5ff 100%);
+  color: #eaf3ff;
+}
+.serif {
+  font-family: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+}
+.mono {
+  font-family: var(--font-plex-mono), "IBM Plex Mono", monospace;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e4e7eb;
+  border-radius: 2px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 8px 14px;
+  border-radius: 2px;
+  border: 1px solid #1565d8;
+  background: #1565d8;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.btn:hover {
+  background: #0f52b3;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-ghost {
+  background: #fff;
+  color: #1565d8;
+  border-color: #e4e7eb;
+}
+.btn-ghost:hover {
+  background: #e8f1fe;
+  border-color: #1565d8;
+}
+.opt {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  border: 1px solid #e4e7eb;
+  border-radius: 2px;
+  background: #fff;
+  padding: 8px 11px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.opt:hover {
+  border-color: #6b7280;
+}
+.opt.on {
+  border-color: #1565d8;
+  background: #e8f1fe;
+}
+.opt .mark {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1.5px solid #c7cbce;
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  color: transparent;
+}
+.opt.radio .mark {
+  border-radius: 50%;
+}
+.opt.on .mark {
+  background: #1565d8;
+  border-color: #1565d8;
+  color: #fff;
+}
+.eyebrow {
+  font-size: 0.64rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #6b7280;
+}
+.progress-log {
+  font-family: var(--font-plex-mono), "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  color: #6b7280;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.progress-log li {
+  padding: 2px 0;
+  border-bottom: 1px solid #f1f3f5;
+}
+.progress-log li.search::before {
+  content: "search ";
+  color: #1565d8;
+  font-weight: 600;
+}
+@keyframes pulse-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+.pulse-bar {
+  position: relative;
+  overflow: hidden;
+  height: 3px;
+  background: #e4e7eb;
+}
+.pulse-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 33%;
+  background: linear-gradient(to right, #1565d8, #18e5ff);
+  animation: pulse-bar 1.6s linear infinite;
+}
+.badge-inline {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 1px 6px;
+  border-radius: 2px;
+  background: #deebff;
+  color: #1565d8;
+  white-space: nowrap;
+}

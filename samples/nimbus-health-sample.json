@@ -1,0 +1,1857 @@
+{
+  "company": "Nimbus Health",
+  "product": "Nimbus",
+  "headline": "Every step across the UK, the EU, Germany and the Netherlands, organized by what depends on what. Click any step for the sub-tasks, the evidence it needs, and what it unlocks downstream.",
+  "readme": [
+    "<strong>One file, four regimes.</strong> Nearly everything in the shared lane - the ISO 13485 quality system, the IEC 62304 software file, the ISO 14971 risk file, usability, cybersecurity, sensor testing and the clinical evaluation - is written once and reused for the UKCA mark, the CE mark, the German DiGA dossier and Dutch hospital procurement. Build it as one core technical file with jurisdiction annexes (S11). Duplicating it is the most reliable way for a two-person team to run out of runway.",
+    "<strong>What a certificate buys, and what it does not.</strong> A UKCA certificate lets you place Nimbus on the UK market; a CE certificate under EU MDR lets you place it on the EU market. Neither buys reimbursement, neither satisfies NHS procurement, and neither answers a German or Dutch national requirement. The country lanes exist because money, data hosting, language and hospital IT review stay national long after the certificate is issued.",
+    "<strong>'Decision' nodes are yours, not your consultancy's.</strong> They mark genuine founder forks: how the intended purpose is framed (S1), whether the sensor and app are one device or two (S2), how much you keep in-house versus buy (S3), what the pivotal trial is actually powered to show (E2), UKCA-first or CE-first and what happens if a queue slips (U2), DiGA or a standard German route (D2), EU hosting (EU4), and the Dutch funding route (N3). A consultancy can price each option; only you can choose between them.",
+    "<strong>The evidence lane is the long pole.</strong> The pivotal trial (E7) gates the UKCA submission, the MDR submission, the DiGA application and every payer conversation. That is why endpoint locking (E2) sits in phase 1 and why German and Dutch payer outcomes are designed into the same protocol (E8) rather than funded as a second study later. One trial, four audiences - and the audiences that pay want clinical outcomes, not prediction accuracy.",
+    "<strong>Sequencing is balanced, as you asked for.</strong> Preparation runs in parallel - Approved Body, notified body, DiGA eligibility and Dutch groundwork all start while the trial runs - but submissions are sequential: UKCA first, CE close behind, national routes after. Fully parallel submission would need more than two people plus a consultancy; fully sequential would put Germany two years out.",
+    "<strong>Scope-outs and honesty markers.</strong> This map does not cover US FDA, corporate structuring or tax on an EU entity, or insurance. No Approved Body, notified body, authorised representative or consultancy is named, because none could be verified as appropriate for your scope in this session - pick from the official lists linked in U3 and EU3. Anything marked low confidence, especially the Dutch nodes and German price setting, rests on thin sourcing and must be confirmed with in-country counsel before you act on it."
+  ],
+  "lanes": [
+    {
+      "id": "ip",
+      "name": "IP & Disclosure",
+      "note": "Priority filing and disclosure control - gates every public-facing step in the plan.",
+      "kind": "other"
+    },
+    {
+      "id": "shared",
+      "name": "Shared Foundations",
+      "note": "QMS, software lifecycle, risk, usability, cybersecurity, sensor testing - written once, reused in all four regimes.",
+      "kind": "shared"
+    },
+    {
+      "id": "evidence",
+      "name": "Clinical Evidence",
+      "note": "Feasibility write-up, pivotal trial at two NHS sites, publication - gates UKCA, CE, DiGA and both payer files.",
+      "kind": "evidence"
+    },
+    {
+      "id": "uk",
+      "name": "United Kingdom (home)",
+      "note": "UK classification, Approved Body conformity assessment, MHRA registration, DTAC and the NHS commercial route.",
+      "kind": "home"
+    },
+    {
+      "id": "eu",
+      "name": "EU conformity (CE)",
+      "note": "MDR classification, notified body, authorised representative, GDPR and AI Act interaction, EUDAMED - the gate to both target member states.",
+      "kind": "eu"
+    },
+    {
+      "id": "de",
+      "name": "Germany",
+      "note": "DiGA eligibility and fast-track, positive care effect evidence, BfArM dossier, localisation and price setting.",
+      "kind": "country"
+    },
+    {
+      "id": "nl",
+      "name": "Netherlands",
+      "note": "National requirements on top of CE, hospital procurement and IT security review, funding route and launch.",
+      "kind": "country"
+    }
+  ],
+  "phases": [
+    {
+      "n": 1,
+      "title": "Start Now"
+    },
+    {
+      "n": 2,
+      "title": "Building the File"
+    },
+    {
+      "n": 3,
+      "title": "Review & Certification"
+    },
+    {
+      "n": 4,
+      "title": "Post-Approval: Market & Reimbursement"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "IP1",
+      "lane": "ip",
+      "phase": 1,
+      "title": "File a UK priority patent application on the prediction method",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "Foundation for every outward-facing step - gates E4, E5, E10, N2 and U8",
+      "desc": "You are pre-patent and have been advised the exacerbation-prediction method is patentable, so a priority date must exist before anything about the feature set, sensor-derived signals or model architecture leaves the building. A first filing at the UK IPO establishes priority and starts the twelve-month clock for foreign-filing decisions (<a href=\"https://www.gov.uk/patent-your-invention\" target=\"_blank\" rel=\"noopener noreferrer\">GOV.UK: apply for a patent</a>). This node gates E4, E5, E10, N2 and U8 - site agreements, the trial registry entry, the journal publication, Dutch procurement conversations and the NHS commercial route. Treat it as the hardest deadline in phase 1: everything commercially useful downstream is a disclosure.",
+      "deps": [],
+      "micro": [
+        {
+          "title": "Write the invention disclosure memo",
+          "time": "Week 1",
+          "detail": "Input signals, feature engineering, the 72-hour horizon, alerting logic - and what is genuinely novel versus standard asthma monitoring.",
+          "now": true
+        },
+        {
+          "title": "Instruct a patent attorney",
+          "time": "Week 1-2",
+          "detail": "Use one with digital-health and ML experience; software-implemented diagnostic methods are drafting-sensitive at both the UKIPO and the EPO.",
+          "now": true
+        },
+        {
+          "title": "Put an NDA and disclosure-control SOP in place",
+          "time": "Week 1-2",
+          "detail": "One page: who may speak to whom, which deck is the external version, standing NDA executed before any technical detail is shared. A two-person team discloses by accident otherwise.",
+          "now": true
+        },
+        {
+          "title": "File the priority application",
+          "time": "Week 3-6",
+          "detail": "Before any site contract, registry entry or investor demo that is not under NDA.",
+          "now": true
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Apply for a patent: Overview - GOV.UK",
+          "url": "https://www.gov.uk/patent-your-invention",
+          "verified": true
+        }
+      ],
+      "tags": [
+        "patent-filing"
+      ]
+    },
+    {
+      "id": "IP2",
+      "lane": "ip",
+      "phase": 3,
+      "title": "Decide the 12-month foreign-filing route: PCT versus direct EP/DE/NL",
+      "duration": 1,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": true,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Twelve months after the priority filing you must choose: a PCT application to buy roughly another eighteen months of optionality, or direct European and national filings. For a UK-first, Germany-and-Netherlands-second plan, PCT is usually the balanced choice because it defers cost until after the pivotal trial reads out and after you know whether the German and Dutch routes are actually live. This is a founder cash decision, not a regulatory one - put the fee estimate in the seed budget now. Confirm timings with your attorney; the general rule is summarised here, not verified in detail.",
+      "deps": [
+        "IP1"
+      ],
+      "micro": null,
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "Apply for a patent: Overview - GOV.UK",
+          "url": "https://www.gov.uk/patent-your-invention",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S1",
+      "lane": "shared",
+      "phase": 1,
+      "title": "Lock the intended-purpose statement and classification framing",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": true,
+      "keystone": true,
+      "keystoneNote": "Foundation for all four jurisdictions - feeds U1, EU1 and D1",
+      "desc": "Your pitch leaves the claim framing open, and that ambiguity is the single largest risk in this plan. An app that predicts an exacerbation within 72 hours and alerts a treating clinician is decision-support software, not a wellness or adherence tool - write the intended purpose that way rather than hoping for a lighter route. Under EU MDR the relevant classification rule for software providing information used for diagnostic or therapeutic decisions is Rule 11 of Annex VIII (<a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0745\" target=\"_blank\" rel=\"noopener noreferrer\">Regulation (EU) 2017/745</a>), and the MHRA publishes a qualification flowchart for stand-alone software and apps. Every downstream lane - U1, EU1, D1 - inherits this sentence verbatim, so it must be one sentence, agreed by the founders and the consultancy, then frozen under version control.",
+      "deps": [],
+      "micro": [
+        {
+          "title": "Draft three candidate intended-purpose statements",
+          "time": "Week 1",
+          "detail": "Wellness/adherence, clinician decision-support, and a narrow alerting framing - with the classification consequence written next to each.",
+          "now": true
+        },
+        {
+          "title": "Run each through the MHRA software flowchart",
+          "time": "Week 1-2",
+          "detail": "Document the reasoning; the rationale is an audit artefact, not a private note.",
+          "now": true
+        },
+        {
+          "title": "Freeze and distribute",
+          "time": "Week 2-3",
+          "detail": "To the consultancy, the trial team and whoever writes app copy. Marketing that exceeds the intended purpose is an enforcement problem later.",
+          "now": true
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "MHRA flowchart: medical device stand-alone software including apps",
+          "url": "https://assets.publishing.service.gov.uk/media/64a7d22d7a4c230013bba33c/Medical_device_stand-alone_software_including_apps__including_IVDMDs_.pdf",
+          "verified": true
+        },
+        {
+          "title": "Regulation (EU) 2017/745 on medical devices - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0745",
+          "verified": true
+        },
+        {
+          "title": "Determining what class your medical device is in - NHS Innovation Service",
+          "url": "https://innovation.nhs.uk/innovation-guides/regulation/general-medical-device-and-active-implantable-medical-devices/",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S2",
+      "lane": "shared",
+      "phase": 1,
+      "title": "Decide the device boundary: bundled system or separable software",
+      "duration": 1,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": true,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "You ship a custom PCB in your own enclosure, so you are a hardware manufacturer whether you like it or not - the question is whether the regulated device is one sensor-plus-app system or an app that accepts data from an accessory. Bundling is easier to defend clinically, because the model was trained on your sensor, but it pulls electrical safety, EMC, radio and biocompatibility onto the critical path via S8. Separating gives a cleaner software product and may matter for the German route, but forces you to specify sensor performance requirements for hardware you do not control. Decide now: the answer sets the structure of the technical file and a large part of the cost base.",
+      "deps": [
+        "S1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "S3",
+      "lane": "shared",
+      "phase": 1,
+      "title": "Appoint the consultancy and stand up an ISO 13485 quality system",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": true,
+      "keystone": true,
+      "keystoneNote": "The QMS underpins UKCA, CE and any DiGA claim - feeds S4, U3 and EU3",
+      "desc": "You have no QMS and a two-person team, and both a UK Approved Body and an EU notified body will audit the system before certifying anything; ISO 13485:2016 is the practical baseline and one system serves both regimes (<a href=\"https://www.iso.org/standard/59752.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO 13485:2016</a>). The founder decision embedded here is scope: let the consultancy own QMS build, technical-file structure, body liaison and national submissions, but keep intended purpose, risk analysis, clinical strategy and ML documentation in-house, because those need product knowledge you cannot rent. Contract against a deliverables list tied to this map, with a named individual rather than a firm. Feeds S4, U3 and EU3; revisit the buy-versus-hire call at the CE submission, where a retained regulatory lead usually becomes better value.",
+      "deps": [
+        "S1"
+      ],
+      "micro": [
+        {
+          "title": "Shortlist and scope the consultancy",
+          "time": "Week 1-3",
+          "detail": "Fixed deliverables, named people, and an explicit list of what you retain in-house.",
+          "now": true
+        },
+        {
+          "title": "Gap assessment against ISO 13485",
+          "time": "Week 3-6",
+          "detail": "Output is a prioritised procedure backlog, not a binder.",
+          "now": true
+        },
+        {
+          "title": "Core procedures first, then run them for real",
+          "time": "Month 2-6",
+          "detail": "Design control, document control, CAPA, supplier control for the PCB manufacturer, software configuration management. Auditors want records, not templates.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "ISO 13485:2016 Medical devices - Quality management systems",
+          "url": "https://www.iso.org/standard/59752.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S4",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Build the IEC 62304 software lifecycle file and SOUP inventory",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "The app, the cloud backend and the clinician dashboard are all medical device software and need a documented lifecycle: software safety classification, architecture, verification at unit, integration and system level, and a complete inventory of third-party components with their known anomalies (<a href=\"https://www.iso.org/standard/38421.html\" target=\"_blank\" rel=\"noopener noreferrer\">IEC 62304:2006</a>). Your TestFlight build almost certainly has no traceable requirement-to-test chain; retrofitting it is the least glamorous and most schedule-critical work in phase 2. Decide explicitly whether the clinician dashboard is a separate software item or part of one system - your pitch does not say, and it changes the architecture documentation and possibly the classification. Feeds S11.",
+      "deps": [
+        "S1",
+        "S3"
+      ],
+      "micro": [
+        {
+          "title": "Assign the software safety classification",
+          "time": "Week 1-2",
+          "detail": "Class A/B/C per IEC 62304, justified from the hazard analysis in S5.",
+          "now": true
+        },
+        {
+          "title": "Retrospective SOUP inventory",
+          "time": "Week 2-5",
+          "detail": "Every library in the app, the ML runtime and the backend, with version and anomaly list.",
+          "now": true
+        },
+        {
+          "title": "Rebuild requirement-to-test traceability",
+          "time": "Month 2-5",
+          "detail": "Derive requirements from the frozen intended purpose, then map tests onto them.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "IEC 62304:2006 Medical device software - Software life cycle processes",
+          "url": "https://www.iso.org/standard/38421.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S5",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Build the ISO 14971 risk file around missed and false 72-hour alerts",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "The risk file is the spine of every submission - feeds S6, S10 and S11",
+      "desc": "The defining hazards of this product are a missed exacerbation, where the patient does not escalate treatment, and alert fatigue, where repeated false positives teach patient and clinician to ignore the product. Both must be analysed, bounded with data, and mitigated in the interface and the clinician workflow (<a href=\"https://www.iso.org/standard/72704.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO 14971:2019</a>). Adolescence adds specific failure modes: non-adherence, taking the sensor off at school, shared phones, and the guardian relationship for younger participants. This file feeds S6, S10 and S11 and is the first document any assessor reads.",
+      "deps": [
+        "S1",
+        "S3"
+      ],
+      "micro": [
+        {
+          "title": "Hazard identification workshop",
+          "time": "Week 1-2",
+          "detail": "Include a respiratory clinician from the feasibility site, under NDA.",
+          "now": true
+        },
+        {
+          "title": "Quantify with the feasibility data",
+          "time": "Week 3-6",
+          "detail": "Use the 40-patient dataset to bound plausible false-negative and false-positive rates before the pivotal starts.",
+          "now": true
+        },
+        {
+          "title": "Write the risk-benefit statement",
+          "time": "Month 2-4",
+          "detail": "Explicit residual-risk acceptability argument for a 12-18 population.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "ISO 14971:2019 Medical devices - Application of risk management to medical devices",
+          "url": "https://www.iso.org/standard/72704.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S6",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Run usability engineering and specify the alert response workflow",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Two very different user groups share one usability file: adolescents using the app and clip-on sensor unsupervised, and respiratory clinicians triaging alerts in a busy clinic. IEC 62366-1 requires a use specification, use-related hazard analysis, formative studies and summative validation with representative users (<a href=\"https://www.iso.org/standard/63179.html\" target=\"_blank\" rel=\"noopener noreferrer\">IEC 62366-1:2015</a>). Bundled into this node is the thing your pitch never states: what a clinician is actually supposed to do when an alert fires - thresholds, escalation path, out-of-hours responsibility, what happens when nobody acknowledges, and whether the alert is advisory or intended to drive a treatment change. That specification flows from the hazards in S5, must be agreed with the NHS sites before the protocol locks, and feeds E3 and S11; a trial that does not define the response workflow cannot demonstrate clinical benefit.",
+      "deps": [
+        "S1",
+        "S5"
+      ],
+      "micro": [
+        {
+          "title": "Use specification for both user groups",
+          "time": "Week 1-3",
+          "detail": "Including the guardian role for younger adolescents and the out-of-hours clinician case.",
+          "now": true
+        },
+        {
+          "title": "Formative studies with adolescent users",
+          "time": "Month 2-3",
+          "detail": "Under NDA, small n, focused on alert comprehension and sensor wear.",
+          "now": true
+        },
+        {
+          "title": "Summative validation",
+          "time": "Month 5-7",
+          "detail": "Production-equivalent app and sensor only.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "IEC 62366-1:2015 Medical devices - Application of usability engineering",
+          "url": "https://www.iso.org/standard/63179.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S7",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Freeze the ML model and write the algorithm change-control protocol",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "A documented locked model is the basis of E3, EU5 and the claims in S11",
+      "desc": "You have said the model is locked, which is the right call for a first certification - but locked must be documented rather than asserted: frozen weights, a versioned training dataset, a documented train/validation/test split, and a protocol stating what would trigger retraining and what re-validation would follow. Write that protocol now even though you do not intend to retrain, because assessors will ask and because your commercial instinct will be to improve the model the week after certification. Report performance for the adolescent subgroup specifically, and check for site-specific bias given the single-hospital feasibility dataset. Feeds E3, EU5 and the performance claims in S11.",
+      "deps": [
+        "S1",
+        "S4",
+        "S5"
+      ],
+      "micro": [
+        {
+          "title": "Freeze weights and dataset version",
+          "time": "Week 1-2",
+          "detail": "Hash the model artefact and training set, store both in the QMS.",
+          "now": true
+        },
+        {
+          "title": "Document training and validation methodology",
+          "time": "Week 2-6",
+          "detail": "Data provenance, the operational definition of 'exacerbation' used for labels, and subgroup performance.",
+          "now": true
+        },
+        {
+          "title": "Write the change-control protocol",
+          "time": "Month 2-3",
+          "detail": "Define what would constitute a significant change requiring re-certification.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "IEC 62304:2006 Medical device software - Software life cycle processes",
+          "url": "https://www.iso.org/standard/38421.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S8",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Test the sensor: electrical safety, EMC, radio and biocompatibility",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A custom PCB in your own enclosure, worn on the chest and used unsupervised at home, sits in medical electrical equipment territory, and the home-healthcare collateral standard is the relevant one (<a href=\"https://www.iso.org/standard/65529.html\" target=\"_blank\" rel=\"noopener noreferrer\">IEC 60601-1-11:2015</a>). Add EMC, the wireless radio conformity route - which differs between the UK and the EU, and whose exact instruments are unverified here, so confirm with the test house - and a biological evaluation for skin contact within the risk-management framework (<a href=\"https://www.iso.org/standard/68936.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO 10993-1:2018</a>). Much of the biocompatibility case can rest on supplier material data if the enclosure and adhesive are standard, so collect certificates from the contract manufacturer before commissioning tests. Lab slots are the classic hidden critical path: book early and expect at least one failed iteration on a first-generation board. Flows from S2 and feeds E6 and S11.",
+      "deps": [
+        "S2",
+        "S5"
+      ],
+      "micro": [
+        {
+          "title": "EMC pre-compliance scan",
+          "time": "Month 1-2",
+          "detail": "Cheap pre-scan before committing to formal testing.",
+          "now": true
+        },
+        {
+          "title": "Collect supplier material data",
+          "time": "Month 1-2",
+          "detail": "Enclosure polymer, adhesive, coatings - this may remove most of the biocompatibility test burden.",
+          "now": true
+        },
+        {
+          "title": "Freeze the sensor design, then book formal testing",
+          "time": "Month 2-6",
+          "detail": "Formal testing on an unfrozen design is money burned; queue time is the risk, not the tests.",
+          "now": false
+        }
+      ],
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "IEC 60601-1-11:2015 Medical electrical equipment - home healthcare environment",
+          "url": "https://www.iso.org/standard/65529.html",
+          "verified": true
+        },
+        {
+          "title": "ISO 10993-1:2018 Biological evaluation of medical devices - Part 1",
+          "url": "https://www.iso.org/standard/68936.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S9",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Design and document cybersecurity across sensor, phone and cloud",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Your data path - sensor to phone to company cloud to clinician dashboard - crosses three trust boundaries and carries identifiable paediatric health data. Document a threat model, the pairing and authentication scheme on the sensor link, encryption in transit and at rest, role separation and authentication on the dashboard, logging, and a vulnerability-response process. Build one artefact and map it to each regime: it feeds U4, EU4 and the Dutch hospital security review. Underspecified cybersecurity is now a routine notified body and NHS deficiency area, and each round trip costs weeks.",
+      "deps": [
+        "S4",
+        "S5"
+      ],
+      "micro": [
+        {
+          "title": "Threat model and data-flow diagram",
+          "time": "Week 1-3",
+          "detail": "One diagram every later questionnaire can reference.",
+          "now": true
+        },
+        {
+          "title": "Vulnerability management process",
+          "time": "Month 2-4",
+          "detail": "Named owner, response SLAs, coordinated-disclosure route.",
+          "now": true
+        },
+        {
+          "title": "Independent penetration test",
+          "time": "Month 3-5",
+          "detail": "NHS and Dutch hospital buyers will ask for a recent report.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "S10",
+      "lane": "shared",
+      "phase": 2,
+      "title": "Write the clinical evaluation plan and first evaluation report",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "The clinical evaluation is the structured argument that the device does what the intended purpose claims, built from literature, the feasibility data and later the pivotal trial. Write the plan before the trial reads out, so the trial is designed to close the gaps the plan identifies rather than the reverse. The 40-patient feasibility study written up in E1 enters as supporting evidence with an honest statement of its limits - single site, unregistered, unpublished. One evaluation serves both the UKCA and MDR files and feeds S11.",
+      "deps": [
+        "S1",
+        "S5",
+        "E1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 consolidated text - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/2023-03-20/eng",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S11",
+      "lane": "shared",
+      "phase": 3,
+      "title": "Assemble one core technical file with UKCA and MDR annex sets",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "Single source of truth for U5, EU6 and D4",
+      "desc": "Build one technical documentation set with jurisdiction-specific annexes rather than two parallel files: the engineering content - design, risk, software, verification, usability, clinical evaluation, cybersecurity, sensor testing - is identical, and only declarations, labelling and route-specific sections diverge. For a two-person team this is the highest-leverage structural decision in the plan, and it is where the consultancy earns its fee. It consumes every phase-2 shared node and feeds U5, EU6 and D4. Put it under real version control in the QMS from day one; uncontrolled edits during review are a reliable source of deficiencies.",
+      "deps": [
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10"
+      ],
+      "micro": [
+        {
+          "title": "Define the file skeleton against MDR Annex II and III",
+          "time": "Month 1",
+          "detail": "Map UKCA requirements onto the same skeleton as an annex rather than a second file.",
+          "now": true
+        },
+        {
+          "title": "Consultancy-led gap review",
+          "time": "Month 2-3",
+          "detail": "A pre-submission gap review before any Approved Body or notified body sees it.",
+          "now": false
+        },
+        {
+          "title": "Freeze for submission",
+          "time": "Month 4",
+          "detail": "Change control from this point onward.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 consolidated text - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/2023-03-20/eng",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "S12",
+      "lane": "shared",
+      "phase": 4,
+      "title": "Stand up post-market surveillance, PMCF and model-drift monitoring",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Certification starts an obligation rather than ending one: a PMS plan, periodic safety reporting, post-market clinical follow-up and incident reporting routes in each market you enter. For a predictive algorithm the PMCF half is substantive - instrument the product to measure real-world sensitivity, false-alert rate and clinician acknowledgement rate, with thresholds that trigger investigation, because population shift and hardware revisions degrade predictors in the field. This is also the early-warning system for the alert-fatigue hazard in S5 and the evidence base for any future retraining, which would be a significant change under the protocol written in S7. Build the procedures during phase 3 so they are live on day one of sale; reporting timelines and forms differ by jurisdiction, so confirm each with the consultancy.",
+      "deps": [
+        "S11",
+        "E9"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 consolidated text - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/2023-03-20/eng",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "E1",
+      "lane": "evidence",
+      "phase": 1,
+      "title": "Write up the 40-patient feasibility study as an internal dossier",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "The feasibility study at the UK children's hospital was neither registered nor published, which caps what it can do - but written up properly it is still valuable as design input, risk quantification and protocol justification. Produce a full internal report: population, data quality, sensor wear compliance, model performance, dropouts and failure modes, with an explicit statement that it is hypothesis-generating. Do not publish it - publication is a disclosure and belongs downstream of the patent filing. It feeds S10 and E2.",
+      "deps": [
+        "S1"
+      ],
+      "micro": [
+        {
+          "title": "Reconstruct the dataset and analysis",
+          "time": "Week 1-4",
+          "detail": "Including wear-compliance and data-quality metrics you will need for the pivotal power calculation.",
+          "now": true
+        },
+        {
+          "title": "Check the data governance basis",
+          "time": "Week 2-4",
+          "detail": "Confirm the original consent and data-sharing agreement actually permit reuse for model development and regulatory purposes.",
+          "now": true
+        }
+      ],
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "E2",
+      "lane": "evidence",
+      "phase": 1,
+      "title": "Lock the pivotal endpoints and the statistical analysis plan",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": true,
+      "keystone": true,
+      "keystoneNote": "Endpoint choice determines what regulators and payers will accept - feeds E3 and E8",
+      "desc": "This is the highest-stakes founder decision in the plan, and your pitch says endpoints are not locked. The fork: a prediction-performance endpoint - sensitivity, specificity and positive predictive value for exacerbation within 72 hours - is cheaper and easier to hit but persuades neither German nor Dutch payers; a clinical-outcome endpoint such as exacerbation rate, unscheduled care or oral corticosteroid courses is slower and riskier but is what reimbursement bodies buy. For a single seed-funded pivotal, the balanced answer is usually a prediction primary with adequately powered clinical secondaries, or a co-primary - but decide it explicitly with a statistician rather than by drift. NICE's evidence standards framework is a useful mirror for what UK decision-makers will expect. Feeds E3 and E8.",
+      "deps": [
+        "E1",
+        "S1"
+      ],
+      "micro": [
+        {
+          "title": "Commission an independent statistician",
+          "time": "Week 1-2",
+          "detail": "Separate from the consultancy; endpoint and power work is a specialist job.",
+          "now": true
+        },
+        {
+          "title": "Model three endpoint scenarios",
+          "time": "Week 2-5",
+          "detail": "Sample size, duration and cost for each - put the numbers in front of the board.",
+          "now": true
+        },
+        {
+          "title": "Lock and version the SAP",
+          "time": "Week 6-10",
+          "detail": "Signed and dated before any registry entry.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Evidence standards framework for digital health technologies | NICE",
+          "url": "https://www.nice.org.uk/corporate/ecd7",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "E3",
+      "lane": "evidence",
+      "phase": 2,
+      "title": "Finalise the pivotal protocol with the two NHS sites",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "The protocol must reflect the locked model from S7 - explicitly no mid-trial retraining - the alert response workflow from S6, and the endpoints from E2. Build in adolescent-specific practicalities: assent plus parental consent across the 12-15 and 16-18 bands, school-hours wear, device loss and replacement, and a retention strategy, because retention is what kills studies in this population. Payer-facing data capture from E8 goes in now, not later. Feeds E5 and E6.",
+      "deps": [
+        "E2",
+        "S7",
+        "S6"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Clinical investigations for medical devices - GOV.UK",
+          "url": "https://www.gov.uk/guidance/notify-mhra-about-a-clinical-investigation-for-a-medical-device",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "E4",
+      "lane": "evidence",
+      "phase": 2,
+      "title": "Sign site agreements and clinical champion arrangements under NDA",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Two NHS sites, named principal investigators, and ideally one respiratory clinician willing to become the public clinical champion later. Every one of these conversations touches the method, so they happen after the priority filing in IP1 and under executed NDAs and data-sharing agreements. Clinical champions do double duty - they run the trial and they become the credibility layer for NHS procurement in U8 and for Dutch hospital adoption. Budget realistic site costs and NHS R&D office lead times; contracting is consistently slower than founders model it.",
+      "deps": [
+        "IP1",
+        "E2"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "HRA Approval - Health Research Authority",
+          "url": "https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/hra-approval/",
+          "verified": true
+        }
+      ],
+      "tags": [
+        "public-disclosure"
+      ]
+    },
+    {
+      "id": "E5",
+      "lane": "evidence",
+      "phase": 2,
+      "title": "Register the pivotal trial publicly before the first participant",
+      "duration": 1,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Prospective registration is expected by journals, ethics committees and payers, and the ISRCTN registry is the standard UK route (<a href=\"https://www.isrctn.com/page/about\" target=\"_blank\" rel=\"noopener noreferrer\">ISRCTN</a>). This is a genuine public disclosure of the intervention and outcome measures, so it sits strictly downstream of IP1 - and make sure no site or CRO registers on your behalf before the priority date exists. Register the protocol as locked in E3; retrospective registration or post-hoc endpoint changes will be held against you by journals and by German and Dutch payers.",
+      "deps": [
+        "IP1",
+        "E3"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "ISRCTN registry - About",
+          "url": "https://www.isrctn.com/page/about",
+          "verified": true
+        }
+      ],
+      "tags": [
+        "public-disclosure"
+      ]
+    },
+    {
+      "id": "E6",
+      "lane": "evidence",
+      "phase": 2,
+      "title": "Submit for REC and HRA approval and notify the MHRA of the investigation",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A trial of an uncertified device in NHS sites needs research ethics and HRA approval (<a href=\"https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/research-ethics-committee-review/applying-research-ethics-committee/\" target=\"_blank\" rel=\"noopener noreferrer\">HRA: applying to a REC</a>) and, depending on device status and study design, notification to the MHRA (<a href=\"https://www.gov.uk/guidance/notify-mhra-about-a-clinical-investigation-for-a-medical-device\" target=\"_blank\" rel=\"noopener noreferrer\">GOV.UK: clinical investigations for medical devices</a>). A paediatric population means a REC flagged for children and closer scrutiny of assent, safeguarding and the alerting workflow. The application needs the safety evidence from S8: you cannot put an untested custom PCB on an adolescent's chest on an ethics submission. Have the consultancy confirm in writing which MHRA route applies to your design, because the answer depends on the classification.",
+      "deps": [
+        "E3",
+        "S8"
+      ],
+      "micro": [
+        {
+          "title": "Prepare the IRAS application and participant materials",
+          "time": "Month 1-2",
+          "detail": "Age-appropriate assent documents for the 12-15 and 16-18 bands, plus guardian information.",
+          "now": true
+        },
+        {
+          "title": "Assemble the pre-clinical safety pack",
+          "time": "Month 2-4",
+          "detail": "Electrical safety, EMC and biocompatibility evidence as available.",
+          "now": false
+        },
+        {
+          "title": "Submit and turn around conditions fast",
+          "time": "Month 4-6",
+          "detail": "Expect a provisional opinion with conditions; response speed is what you control.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Applying to a Research Ethics Committee - Health Research Authority",
+          "url": "https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/research-ethics-committee-review/applying-research-ethics-committee/",
+          "verified": true
+        },
+        {
+          "title": "HRA Approval - Health Research Authority",
+          "url": "https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/hra-approval/",
+          "verified": true
+        },
+        {
+          "title": "Clinical investigations for medical devices - GOV.UK",
+          "url": "https://www.gov.uk/guidance/notify-mhra-about-a-clinical-investigation-for-a-medical-device",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "E7",
+      "lane": "evidence",
+      "phase": 3,
+      "title": "Run the pivotal trial across the two NHS sites",
+      "duration": 4,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "The long pole of the entire plan and the thing the seed round is actually funding. Adolescent retention and sensor wear compliance are the two failure modes that kill studies like this, so resource participant engagement properly rather than assuming an app is intrinsically motivating. Make no model changes during the trial: the locked artefact from S7 is the article under test, and retraining mid-study invalidates the file. Report recruitment rate to the board monthly - it is the leading indicator for every date downstream.",
+      "deps": [
+        "E6",
+        "E4"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "E8",
+      "lane": "evidence",
+      "phase": 2,
+      "title": "Embed German and Dutch payer outcomes in the pivotal protocol",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "One dataset, three markets - feeds D3 and N3",
+      "desc": "German and Dutch reimbursement bodies buy patient-relevant benefit and health-economic impact, not prediction accuracy, and those outcomes cannot be collected retrospectively. Add healthcare-utilisation capture - unscheduled care, oral corticosteroid courses, school absence - a validated asthma control and quality-of-life instrument, and resource-use data to the protocol now. The marginal cost inside an existing trial is small; a second study later costs a funding round. What goes in here is shaped by the German route decision in D2, and it feeds D3 and N3.",
+      "deps": [
+        "E2",
+        "E3",
+        "D2"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "BfArM - The Fast-Track Process for Digital Health Applications (DiGA): A Guide for Manufacturers",
+          "url": "https://www.bfarm.de/SharedDocs/Downloads/EN/MedicalDevices/DiGA_Guide.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "E9",
+      "lane": "evidence",
+      "phase": 3,
+      "title": "Lock the database, run the analysis and issue the clinical study report",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": true,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "Unblocks U5, EU6, D5 and the payer files",
+      "desc": "Database lock, unblinded analysis against the pre-specified SAP, and a study report that also updates the clinical evaluation. Report subgroup performance honestly, particularly across age bands and between the two sites - a model that works at one hospital and not the other is a finding you need to own before an assessor finds it. This unblocks U5, EU6, D5 and E10. If the primary endpoint misses, the contingency is a narrowed intended purpose that loops back through the whole file, so schedule a board review at this point rather than after.",
+      "deps": [
+        "E7"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "E10",
+      "lane": "evidence",
+      "phase": 4,
+      "title": "Publish the pivotal results in a peer-reviewed respiratory journal",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Peer-reviewed publication is what converts a trial into a purchasing argument for NHS buyers, German payers and Dutch hospitals. It is also an irreversible public disclosure, so it sits downstream of IP1 and should be timed against the foreign-filing decision in IP2. Target a journal with paediatric respiratory readership and include the site principal investigators as authors - authorship is part of what you promised the champions recruited in E4. Check any pre-print timing against the patent position before posting.",
+      "deps": [
+        "IP1",
+        "E9",
+        "IP2"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": [
+        "public-disclosure"
+      ]
+    },
+    {
+      "id": "U1",
+      "lane": "uk",
+      "phase": 1,
+      "title": "Confirm the UK classification and the UKCA conformity assessment route",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Take the frozen intended purpose from S1 and determine class and conformity route under the UK regime, using the MHRA stand-alone software flowchart and the GOV.UK guidance on regulating medical devices (<a href=\"https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk\" target=\"_blank\" rel=\"noopener noreferrer\">GOV.UK</a>). Anything above the lowest class requires an Approved Body, which drives U3 and the whole phase-3 timeline. The UK regime is also under reform for software and AI devices, so have the consultancy confirm current and transitional requirements in writing rather than relying on secondary summaries, including this one. Record the classification rationale as a technical file document.",
+      "deps": [
+        "S1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulating medical devices in the UK - GOV.UK",
+          "url": "https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk",
+          "verified": true
+        },
+        {
+          "title": "MHRA flowchart: medical device stand-alone software including apps",
+          "url": "https://assets.publishing.service.gov.uk/media/64a7d22d7a4c230013bba33c/Medical_device_stand-alone_software_including_apps__including_IVDMDs_.pdf",
+          "verified": true
+        },
+        {
+          "title": "Determining what class your medical device is in - NHS Innovation Service",
+          "url": "https://innovation.nhs.uk/innovation-guides/regulation/general-medical-device-and-active-implantable-medical-devices/",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "U2",
+      "lane": "uk",
+      "phase": 1,
+      "title": "Decide UKCA-first versus CE-first, and set the queue-slip contingency",
+      "duration": 1,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": true,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Your home market is the UK and your trial, sites and champions are all British, which argues for UKCA first and an earlier revenue reference; CE first opens Germany and the Netherlands but puts you in a notified body queue with no UK revenue meanwhile. Balanced sequencing, which is what you asked for: prepare a single technical file, submit for UKCA first, and run the notified body relationship in parallel so the CE submission follows within a quarter - this is the decision EU6 executes against. Set the contingency in the same board minute: if CE is more than two quarters behind the UK outcome, the plan becomes UK-only commercialisation with re-cut German and Dutch timelines, and the Dutch launch defers before the German route does, because the German evidence work is work the pivotal trial is already carrying.",
+      "deps": [
+        "S1",
+        "U1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulating medical devices in the UK - GOV.UK",
+          "url": "https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "U3",
+      "lane": "uk",
+      "phase": 2,
+      "title": "Apply to a UK Approved Body and book an assessment slot",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Approved Body capacity is the constraint, not your paperwork - the queue sets your UKCA date, so apply early. The MHRA publishes the list of designated UK Approved Bodies with their scopes; check the scope covers active devices with software at your class before approaching (<a href=\"https://www.gov.uk/government/publications/medical-devices-uk-approved-bodies\" target=\"_blank\" rel=\"noopener noreferrer\">GOV.UK: list of UK approved bodies</a>). No body is named in this map deliberately - select from the official list, and do not name one in investor materials before a contract is signed. Flows from U1 and the QMS work in S3, and feeds U5.",
+      "deps": [
+        "U1",
+        "S3"
+      ],
+      "micro": [
+        {
+          "title": "Shortlist by designated scope",
+          "time": "Week 1-3",
+          "detail": "Check scope against your class and device type on the published list.",
+          "now": true
+        },
+        {
+          "title": "Request quotes and honest queue dates",
+          "time": "Week 2-6",
+          "detail": "Ask for realistic slot dates, not headline review times, and what happens to the slot if your file is late.",
+          "now": true
+        },
+        {
+          "title": "Contract and book",
+          "time": "Month 2-4",
+          "detail": "A booked slot is a milestone; an unbooked one is a hope.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Medical devices: list of UK approved bodies - GOV.UK",
+          "url": "https://www.gov.uk/government/publications/medical-devices-uk-approved-bodies",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "U4",
+      "lane": "uk",
+      "phase": 2,
+      "title": "Run the UK GDPR DPIA and complete the NHS DTAC pack",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Special-category health data on minors, continuous sensor monitoring, an ML model and a clinician dashboard: a data protection impact assessment is mandatory in substance and will be demanded by every NHS buyer. Resolve what your pitch leaves open - who is controller for dashboard data, you or the trust, where the cloud sits, retention periods, and how consent works across the 12-15 and 16-18 bands with guardian involvement. Then complete DTAC, NHS England's baseline assessment covering clinical safety, data protection, technical security, interoperability and usability (<a href=\"https://digitalregulations.innovation.nhs.uk/regulations-and-guidance-for-developers/all-developers-guidance/using-the-digital-technology-assessment-criteria-dtac/\" target=\"_blank\" rel=\"noopener noreferrer\">AI and Digital Regulations Service: DTAC</a>) - much of it is answerable from S9, which is why it belongs in phase 2 while gaps such as a clinical safety officer are still cheap to fix. This work is reused in EU4 and feeds U8.",
+      "deps": [
+        "S9",
+        "S1"
+      ],
+      "micro": [
+        {
+          "title": "Data-flow and controllership map",
+          "time": "Week 1-3",
+          "detail": "Built on the S9 diagram; settle the dashboard controllership question explicitly.",
+          "now": true
+        },
+        {
+          "title": "DPIA with privacy counsel review",
+          "time": "Month 1-3",
+          "detail": "Paediatric special-category data is an area where generalist consultancies are thin.",
+          "now": true
+        },
+        {
+          "title": "Complete the DTAC pack",
+          "time": "Month 2-4",
+          "detail": "Appoint a clinical safety officer and close interoperability gaps surfaced by the questions.",
+          "now": false
+        }
+      ],
+      "confidence": "high",
+      "sources": [
+        {
+          "title": "Using the Digital Technology Assessment Criteria (DTAC)",
+          "url": "https://digitalregulations.innovation.nhs.uk/regulations-and-guidance-for-developers/all-developers-guidance/using-the-digital-technology-assessment-criteria-dtac/",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "U5",
+      "lane": "uk",
+      "phase": 3,
+      "title": "Submit the technical file for UKCA conformity assessment",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "The submission that turns two years of work into a certificate: it needs the assembled file from S11, a booked slot from U3 and the trial results from E9 folded into the clinical evaluation. Expect a deficiency round rather than a clean pass, and keep the consultancy retained through the response period, not just to the submission date - response quality and turnaround is the only variable you control. Timing follows the call made in U2.",
+      "deps": [
+        "S11",
+        "U3",
+        "U2",
+        "E9"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulating medical devices in the UK - GOV.UK",
+          "url": "https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "U6",
+      "lane": "uk",
+      "phase": 3,
+      "title": "Close Approved Body findings and obtain the UKCA certificate",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Work through non-conformities from both the technical documentation review and the quality system audit, with a named owner and a weekly cadence - findings close on responsiveness, not on argument. Do not start UK commercial launch activity on the assumption of certification; marketing ahead of a certificate is an enforcement risk and an investor embarrassment. Once issued this unlocks U7.",
+      "deps": [
+        "U5"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulating medical devices in the UK - GOV.UK",
+          "url": "https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "U7",
+      "lane": "uk",
+      "phase": 4,
+      "title": "Register the device with the MHRA before placing it on the UK market",
+      "duration": 1,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Devices must be registered with the MHRA before being placed on the UK market, and whether a UK Responsible Person is required depends on where the manufacturer is established (<a href=\"https://www.digitalregulations.innovation.nhs.uk/regulations-and-guidance-for-developers/all-developers-guidance/registering-medical-devices-with-the-mhra/\" target=\"_blank\" rel=\"noopener noreferrer\">AI and Digital Regulations Service</a>). As a UK-established manufacturer you would normally register directly rather than appointing a UKRP, but confirm the current process, fees and timing with the MHRA - do not rely on this summary. Feeds U8.",
+      "deps": [
+        "U6"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Registering your medical device with the MHRA - AI and Digital Regulations Service",
+          "url": "https://www.digitalregulations.innovation.nhs.uk/regulations-and-guidance-for-developers/all-developers-guidance/registering-medical-devices-with-the-mhra/",
+          "verified": true
+        },
+        {
+          "title": "Regulating medical devices in the UK - GOV.UK",
+          "url": "https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "U8",
+      "lane": "uk",
+      "phase": 4,
+      "title": "Build the NICE evidence case and convert trial sites into NHS contracts",
+      "duration": 3,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "NICE's evidence standards framework describes what evidence NHS decision-makers expect from digital health technologies, tiered by function and risk, and a predictive tool that drives clinical action sits at the demanding end (<a href=\"https://www.nice.org.uk/what-nice-does/digital-health/evidence-standards-framework-esf-for-digital-health-technologies\" target=\"_blank\" rel=\"noopener noreferrer\">NICE ESF</a>). Map your pivotal results onto the relevant tier, write the value case in the buyer's language, and then move your two trial sites from research to procurement with DTAC, the certificate and MHRA registration from U7 in hand. Procurement conversations without an NDA are public disclosure, which is why this sits downstream of IP1. Budget six to twelve months from certificate to first paid contract and do not let the board model a shorter cycle.",
+      "deps": [
+        "IP1",
+        "U7",
+        "U4",
+        "E9"
+      ],
+      "micro": [
+        {
+          "title": "Map product functions to ESF tiers",
+          "time": "Now",
+          "detail": "Can be done today against the published framework - needs no trial data.",
+          "now": true
+        },
+        {
+          "title": "Map the buyer and the budget at each trial site",
+          "time": "Now",
+          "detail": "Who signs: the respiratory service, the ICB, or a transformation fund? Start under NDA today.",
+          "now": true
+        },
+        {
+          "title": "Assemble the trust information-governance pack",
+          "time": "Month 1-3",
+          "detail": "DPIA, DTAC, penetration test report, clinical safety case.",
+          "now": false
+        },
+        {
+          "title": "Negotiate first contracts",
+          "time": "After certification",
+          "detail": "Reference-site pricing in exchange for published outcomes.",
+          "now": false
+        }
+      ],
+      "confidence": "high",
+      "sources": [
+        {
+          "title": "Evidence standards framework for digital health technologies | NICE",
+          "url": "https://www.nice.org.uk/corporate/ecd7",
+          "verified": true
+        },
+        {
+          "title": "Evidence standards framework (ESF) for digital health technologies | NICE",
+          "url": "https://www.nice.org.uk/what-nice-does/digital-health/evidence-standards-framework-esf-for-digital-health-technologies",
+          "verified": true
+        },
+        {
+          "title": "Using the Digital Technology Assessment Criteria (DTAC)",
+          "url": "https://digitalregulations.innovation.nhs.uk/regulations-and-guidance-for-developers/all-developers-guidance/using-the-digital-technology-assessment-criteria-dtac/",
+          "verified": true
+        }
+      ],
+      "tags": [
+        "public-disclosure"
+      ]
+    },
+    {
+      "id": "EU1",
+      "lane": "eu",
+      "phase": 1,
+      "title": "Confirm MDR classification and keep intended-purpose parity with the UK",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "One intended purpose, four regimes - feeds EU3, D1 and N1",
+      "desc": "Classify under EU MDR using the same frozen intended purpose from S1, and resist narrowing the claim for Europe while widening it for the UK - divergent intended purposes mean two technical files, two clinical evaluations and two sets of marketing constraints for a two-person company. Rule 11 of Annex VIII governs software providing information used for diagnostic or therapeutic decisions (<a href=\"https://eur-lex.europa.eu/eli/reg/2017/745/2023-03-20/eng\" target=\"_blank\" rel=\"noopener noreferrer\">Regulation (EU) 2017/745, consolidated text</a>). The classification outcome determines notified body involvement in EU3 and, critically, whether the German DiGA route in D1 is open to you at all. Document the rationale with the consultancy and have it sanity-checked in a notified body pre-submission conversation.",
+      "deps": [
+        "S1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 on medical devices - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0745",
+          "verified": true
+        },
+        {
+          "title": "Regulation (EU) 2017/745 consolidated text - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/2023-03-20/eng",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "EU2",
+      "lane": "eu",
+      "phase": 2,
+      "title": "Appoint an EU authorised representative and map the supply chain",
+      "duration": 1,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A UK-established manufacturer placing devices on the EU market needs an authorised representative established in the Union under a written mandate, plus a defined importer and distributor chain for Germany and the Netherlands (see Regulation (EU) 2017/745). Choose an AR with real capacity in both target markets and check precisely what they will and will not do on vigilance and registration - the cheap ones are a mailbox with a stamp. Start the contracting in phase 2; document handover has a long tail and the AR feeds the registration work in EU8. Confirm the specific mandate obligations with the consultancy; the details matter and are not reproduced here.",
+      "deps": [
+        "EU1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 on medical devices - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0745",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "EU3",
+      "lane": "eu",
+      "phase": 2,
+      "title": "Select and contract an MDR notified body",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": true,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Notified body capacity is the single biggest schedule risk in the European half of this plan, and a two-person startup is not an attractive client - approach early, with a credible quality system from S3 and a realistic timeline. Verify designation scope covers your class and software-based active devices, ask for concrete queue dates, and pay for a pre-submission or structured dialogue meeting if offered: two hours on classification, clinical evidence sufficiency and locked-model documentation is worth months. No notified body is named here deliberately - select from the official designation database and do not announce the relationship before contracts are signed. Feeds EU6.",
+      "deps": [
+        "EU1",
+        "S3"
+      ],
+      "micro": [
+        {
+          "title": "Shortlist by designation scope",
+          "time": "Month 1",
+          "detail": "Verify scope on the official designation database rather than a broker's list.",
+          "now": true
+        },
+        {
+          "title": "Request quotes and honest queue dates",
+          "time": "Month 1-3",
+          "detail": "Ask what happens to your slot if the file arrives late.",
+          "now": true
+        },
+        {
+          "title": "Buy a pre-submission meeting",
+          "time": "Month 2-4",
+          "detail": "Spend it on classification, clinical evidence sufficiency and the locked model.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 on medical devices - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0745",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "EU4",
+      "lane": "eu",
+      "phase": 2,
+      "title": "Decide EU data hosting and map GDPR controllership for the dashboard",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": true,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Your pitch does not say where data is hosted or who controls what, and Germany and the Netherlands are the two markets least willing to leave that vague. Decide now whether to run EU-resident hosting - far cheaper to architect than to retrofit once you have German and Dutch hospital customers - and document controller and processor roles separately for the patient app and the clinician dashboard. This reuses the analysis structure from U4 and the data-flow work in S9, and it feeds N2. Treat EU hosting as a commercial enabler for the country lanes, not merely a compliance item.",
+      "deps": [
+        "S9",
+        "EU1",
+        "U4"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "EU5",
+      "lane": "eu",
+      "phase": 2,
+      "title": "Assess how the EU AI Act interacts with your MDR route",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A machine-learned exacerbation predictor inside a regulated device is exactly the overlap case between the EU AI Act and the MDR, with real consequences for risk management, data governance and transparency documentation (see this <a href=\"https://www.nature.com/articles/s41746-024-01232-3\" target=\"_blank\" rel=\"noopener noreferrer\">npj Digital Medicine analysis of the AI Act and regulated digital medical products</a>). The model being locked, per S7, simplifies the position considerably - a continuously learning model would be materially harder. Commission a written applicability and timing assessment from the consultancy rather than assuming MDR compliance is sufficient; specific obligations and dates must be confirmed against the official text before you rely on them, and are not asserted here.",
+      "deps": [
+        "S7",
+        "EU1"
+      ],
+      "micro": null,
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "Navigating the EU AI Act: implications for regulated digital medical products (npj Digital Medicine)",
+          "url": "https://www.nature.com/articles/s41746-024-01232-3",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "EU6",
+      "lane": "eu",
+      "phase": 3,
+      "title": "Submit the MDR technical documentation to the notified body",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Submit the same core file from S11 with the MDR annex set, including the clinical evaluation updated with the E9 results, on the timing set by the decision in U2. Expect the heaviest questioning on clinical evidence sufficiency for a predictive claim in a paediatric population, on locked-model documentation, and on cybersecurity. Keep the deficiency-response team the same people who wrote the file - handing responses to a fresh consultant costs a review cycle. Feeds EU7.",
+      "deps": [
+        "S11",
+        "EU3",
+        "E9",
+        "U2"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 consolidated text - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/2023-03-20/eng",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "EU7",
+      "lane": "eu",
+      "phase": 3,
+      "title": "Clear the QMS audit and deficiencies to obtain the CE certificate",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": true,
+      "decision": false,
+      "keystone": true,
+      "keystoneNote": "The CE certificate is the gate for both target member states - unblocks D5 and N4",
+      "desc": "Notified body assessment covers both the technical documentation and an audit of the ISO 13485 system built in S3, and for a first-time manufacturer the audit is often the harder half. Plan for at least one round of major findings and a re-audit; for a first MDR certification the realistic window from submission to certificate is measured in quarters, not weeks. This certificate is the precondition for the German submission in D5 and the Dutch launch in N4 - everything commercial in those two countries waits on it. Track it as the single dependency most likely to move your revenue date.",
+      "deps": [
+        "EU6"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 consolidated text - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/2023-03-20/eng",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "EU8",
+      "lane": "eu",
+      "phase": 4,
+      "title": "Assign UDI and complete EUDAMED registration obligations",
+      "duration": 1,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Once certified, the manufacturer, the authorised representative appointed in EU2 and the device itself carry registration and unique device identification obligations under the MDR, with EUDAMED as the European database. Module availability and mandatory-use dates have shifted repeatedly - confirm the current position with the notified body and the AR rather than relying on any summary, including this one. Assign UDI-DIs consistently across the app and the sensor and align them with labelling before the certificate lands, so this stays administrative rather than becoming a project.",
+      "deps": [
+        "EU7",
+        "EU2"
+      ],
+      "micro": null,
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "Regulation (EU) 2017/745 consolidated text - EUR-Lex",
+          "url": "https://eur-lex.europa.eu/eli/reg/2017/745/2023-03-20/eng",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "D1",
+      "lane": "de",
+      "phase": 1,
+      "title": "Verify DiGA eligibility against your device class and intended purpose",
+      "duration": 1,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "The DiGA fast-track is attractive but conditional: BfArM operates it for digital health applications under the German social code, with eligibility tied to device class and the nature of the application (<a href=\"https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html\" target=\"_blank\" rel=\"noopener noreferrer\">BfArM: Digital Health Applications</a>, plus the published manufacturer guide). The critical questions for Nimbus are whether a product that includes a custom body-worn sensor fits the DiGA definition, and whether the classification outcome from EU1 keeps you inside the eligible risk classes. Answer this in week one with the BfArM guide in hand, because a negative answer changes the entire German plan and should change what you tell investors. Feeds D2.",
+      "deps": [
+        "EU1"
+      ],
+      "micro": [
+        {
+          "title": "Read the BfArM manufacturer guide against your product",
+          "time": "Week 1-2",
+          "detail": "Specifically eligibility, device class and how hardware components are treated.",
+          "now": true
+        },
+        {
+          "title": "Get a written eligibility opinion",
+          "time": "Week 2-6",
+          "detail": "From the consultancy or German counsel, with reasoning, before the German plan goes into a board deck.",
+          "now": true
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "BfArM - Digital Health Applications (DiGA)",
+          "url": "https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html",
+          "verified": true
+        },
+        {
+          "title": "BfArM - The Fast-Track Process for Digital Health Applications (DiGA): A Guide for Manufacturers",
+          "url": "https://www.bfarm.de/SharedDocs/Downloads/EN/MedicalDevices/DiGA_Guide.html",
+          "verified": true
+        },
+        {
+          "title": "BfArM - Digital Health Applications (DiGA) - Interesting facts",
+          "url": "https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/Interesting-facts/_artikel.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "D2",
+      "lane": "de",
+      "phase": 2,
+      "title": "Decide DiGA fast-track versus a standard German market route",
+      "duration": 1,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": true,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "If eligibility holds, the fast-track offers a defined route into statutory reimbursement; if it does not - most likely because of the sensor hardware or the risk class - the fallback is selective contracts with sickness funds or a hospital-sold model, which is slower and relationship-driven. Make this call explicitly after D1 rather than letting 'DiGA is attractive' sit unexamined in the deck. The decision determines whether you fund the care-effect study in D3 and build the dossier in D4, and it shapes what payer outcomes go into the protocol in E8. A middle path exists and is the balanced recommendation: design the trial so its outcomes serve either route.",
+      "deps": [
+        "D1"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "BfArM - The Fast-Track Process for Digital Health Applications (DiGA): A Guide for Manufacturers",
+          "url": "https://www.bfarm.de/SharedDocs/Downloads/EN/MedicalDevices/DiGA_Guide.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "D3",
+      "lane": "de",
+      "phase": 2,
+      "title": "Design the positive care effect evidence to German expectations",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": true,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "The DiGA route requires demonstrating a positive care effect - a medical benefit or a patient-relevant improvement in structure and processes of care - and BfArM's manufacturer guide sets out what is expected (<a href=\"https://www.bfarm.de/SharedDocs/Downloads/EN/MedicalDevices/DiGA_Guide.html\" target=\"_blank\" rel=\"noopener noreferrer\">BfArM guide for manufacturers</a>). The strategic move is to design the pivotal trial via E8 so it can carry this evidence, rather than funding a separate German study out of a seed round. Check comparator, design and population requirements directly against the guide before the protocol locks - the detailed requirements must be read at source, not inferred from this summary. If a separate German study is genuinely required, that is a Series A line item and should be stated as such to investors now.",
+      "deps": [
+        "D2",
+        "E8"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "BfArM - The Fast-Track Process for Digital Health Applications (DiGA): A Guide for Manufacturers",
+          "url": "https://www.bfarm.de/SharedDocs/Downloads/EN/MedicalDevices/DiGA_Guide.html",
+          "verified": true
+        },
+        {
+          "title": "BfArM - Digital Health Applications (DiGA)",
+          "url": "https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "D4",
+      "lane": "de",
+      "phase": 3,
+      "title": "Prepare the BfArM dossier, German localisation and security pack",
+      "duration": 3,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "A DiGA application needs more than evidence: German-language product and materials, accessibility, interoperability and data-protection and information-security requirements that BfArM sets out for manufacturers. Build the dossier as an annex set on the core technical file from S11 rather than starting a new file. Localising a clinician dashboard and adolescent-facing coaching content is a genuine translation and content-design project - scope it in months, with German respiratory clinician review of the clinical content. Confirm the current requirement list directly against the BfArM guide; the specific security and interoperability requirements change and are not reproduced here.",
+      "deps": [
+        "D3",
+        "S11"
+      ],
+      "micro": [
+        {
+          "title": "Requirement-by-requirement gap list from the BfArM guide",
+          "time": "Month 1",
+          "detail": "Can start today: the guide is published and most of your gaps are already known.",
+          "now": true
+        },
+        {
+          "title": "German localisation of app and dashboard",
+          "time": "Month 2-5",
+          "detail": "Clinical content translated and reviewed by a German respiratory clinician.",
+          "now": false
+        },
+        {
+          "title": "Assemble the dossier",
+          "time": "Month 4-7",
+          "detail": "As an annex set on the core file, not a parallel document.",
+          "now": false
+        }
+      ],
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "BfArM - The Fast-Track Process for Digital Health Applications (DiGA): A Guide for Manufacturers",
+          "url": "https://www.bfarm.de/SharedDocs/Downloads/EN/MedicalDevices/DiGA_Guide.html",
+          "verified": true
+        },
+        {
+          "title": "BfArM - Digital Health Applications (DiGA)",
+          "url": "https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "D5",
+      "lane": "de",
+      "phase": 4,
+      "title": "Submit the DiGA application to BfArM and prepare for price setting",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Submission needs the CE certificate from EU7, the results from E9 and the dossier from D4. BfArM operates the fast-track with a defined assessment period and a provisional-listing mechanism for applications that still need to generate evidence - confirm current timelines, fees and provisional-listing conditions directly in the BfArM guide rather than relying on this node, and decide in advance whether you are applying for permanent or provisional listing, because provisional buys time but commits you to a further evidence programme on a fixed clock. Listing is not pricing: reimbursement involves a subsequent price-setting process with the statutory health insurance side whose mechanics are unverified here - confirm before use, take German pricing advice early, and model revenue as a range rather than a headline figure.",
+      "deps": [
+        "D4",
+        "EU7",
+        "E9"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [
+        {
+          "title": "BfArM - The Fast-Track Process for Digital Health Applications (DiGA): A Guide for Manufacturers",
+          "url": "https://www.bfarm.de/SharedDocs/Downloads/EN/MedicalDevices/DiGA_Guide.html",
+          "verified": true
+        },
+        {
+          "title": "BfArM - Digital Health Applications (DiGA) - Interesting facts",
+          "url": "https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/Interesting-facts/_artikel.html",
+          "verified": true
+        },
+        {
+          "title": "BfArM - Digital Health Applications (DiGA)",
+          "url": "https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html",
+          "verified": true
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "N1",
+      "lane": "nl",
+      "phase": 1,
+      "title": "Commission a Dutch country memo on national requirements and security",
+      "duration": 1,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "CE marking puts the device legally on the Dutch market, but national rules still apply on language, national notification or registration duties, and healthcare-specific obligations enforced by the Dutch inspectorate - and Dutch hospitals apply their own healthcare information-security expectations in procurement. None of these specifics could be verified against an official source in this session, so treat them as questions rather than answers: unverified, confirm with Dutch regulatory counsel before acting. Commission a short written country memo now; it is cheap, and it tells you whether Dutch-language localisation and any hosting requirement are a phase-2 engineering cost or a phase-4 admin cost. Feeds N2 and N3.",
+      "deps": [
+        "EU1"
+      ],
+      "micro": null,
+      "confidence": "low",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "N2",
+      "lane": "nl",
+      "phase": 2,
+      "title": "Map hospital procurement and IT review via the investor's relationships",
+      "duration": 2,
+      "risk": "med",
+      "urgency": "now",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Your lead investor's hospital relationships are a real asset but they are an introduction, not a sale - use them to map the actual decision path: which clinician champions the tool, which department budget pays, what the IT security questionnaire demands, and how a 72-hour predictive alert fits Dutch respiratory care pathways. The security answer should fall straight out of the hosting decision in EU4, so you are not solving it twice. Every one of these conversations is a disclosure unless it is under NDA, which is why this sits downstream of IP1 and under the disclosure SOP. Do it during the trial rather than after - a year of relationship-building runs in parallel for free. Feeds N4.",
+      "deps": [
+        "IP1",
+        "N1",
+        "EU4"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": [
+        "public-disclosure"
+      ]
+    },
+    {
+      "id": "N3",
+      "lane": "nl",
+      "phase": 3,
+      "title": "Plan the Dutch funding route: hospital budget or insured-care inclusion",
+      "duration": 2,
+      "risk": "high",
+      "urgency": "now",
+      "overlap": false,
+      "decision": true,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "Decide whether Nimbus is sold into hospital budgets, pursued for inclusion in insured care, or routed through a conditional-funding scheme. The Dutch assessment and funding landscape for digital health could not be verified in this session, so treat the route options as unconfirmed and have a Dutch market-access adviser write the options memo - unverified, confirm before use. What is clear regardless of route is that the health-economic and utilisation data from E8 is the currency in every version of that conversation, which is why it had to go into the protocol in phase 2. Sequence this in phase 3 so the answer is ready when the certificate lands. Feeds N4.",
+      "deps": [
+        "N1",
+        "E8"
+      ],
+      "micro": null,
+      "confidence": "low",
+      "sources": [],
+      "tags": []
+    },
+    {
+      "id": "N4",
+      "lane": "nl",
+      "phase": 4,
+      "title": "Launch in the Netherlands: pilot at one hospital, then convert to contract",
+      "duration": 3,
+      "risk": "med",
+      "urgency": "wait",
+      "overlap": false,
+      "decision": false,
+      "keystone": false,
+      "keystoneNote": null,
+      "desc": "With the CE certificate from EU7, the procurement map from N2 and the funding route from N3, run a paid or co-funded pilot at one investor-linked hospital and convert it into a reference contract. A public pilot announcement is a disclosure, so keep it downstream of the patent filing and coordinate its timing with the publication in E10 - one story, two markets. Resource a Dutch-speaking clinical support person: adolescent engagement and clinician onboarding do not survive a language barrier. Treat the first Dutch site as an evidence-generating deployment feeding the post-market plan, not just revenue.",
+      "deps": [
+        "EU7",
+        "N2",
+        "N3",
+        "E10"
+      ],
+      "micro": null,
+      "confidence": "med",
+      "sources": [],
+      "tags": [
+        "public-disclosure"
+      ]
+    }
+  ],
+  "warnings": [
+    "PRE-PATENT: nothing about the exacerbation-prediction method may be disclosed publicly before the priority filing in IP1. The trial registry entry (E5), site and clinical champion agreements (E4), the journal publication (E10), Dutch procurement conversations (N2), the Dutch pilot launch (N4) and NHS commercial conversations (U8) are all disclosures and all sit downstream of IP1. A registry entry made by a site or CRO on your behalf counts - control it in writing.",
+    "Intended-purpose framing is unresolved and is the biggest single swing factor in this plan. A 72-hour prediction that alerts a treating clinician is decision-support, not wellness. Framing it honestly (S1) means a higher likely risk class, a notified body, and a harder clinical evidence bar - and DiGA eligibility (D1) is the thing most likely to break if the class lands high.",
+    "Evidence risk: the 40-patient feasibility study was neither registered nor published, so it is supporting evidence only, and pivotal endpoints are not locked (E2). A prediction-accuracy endpoint alone may satisfy conformity assessment but will not satisfy German or Dutch payers - which is why payer outcomes must be in the protocol (E8) before it is registered in E5.",
+    "Netherlands content is low-confidence throughout. Dutch national registration duties, language obligations, the applicable healthcare information-security norm and the reimbursement route could not be verified against an official source in this session. Treat N1 and N3 as questions for Dutch regulatory and market-access counsel, not as answers.",
+    "German requirements here are stated only at the level of the published BfArM manufacturer guide, and the post-listing price-setting process in D5 is explicitly unverified. Read the guide directly before the German plan goes into a board deck or an investor model.",
+    "Schedule risk sits in queues you do not control: UK Approved Body capacity (U3), MDR notified body capacity (EU3), and safety, EMC and radio lab slots for the first-generation PCB (S8). Book all three earlier than feels necessary; the contingency trigger is written into U2.",
+    "Hardware is the under-modelled cost in your pitch. A custom PCB and enclosure brings electrical safety, EMC, radio and biocompatibility testing plus supplier and production controls into an otherwise software-shaped plan (S8) - and it is also the most likely reason the DiGA route closes.",
+    "Staffing: the plan assumes a consultancy, as you specified. That works to the CE submission; from EU6 and U5 onward, deficiency responses need someone who owns the file full-time. Budget a regulatory hire at seed close or accept slower review cycles."
+  ],
+  "disclaimer": "Internal strategy tool — not legal advice. Verify with qualified regulatory counsel before acting.",
+  "generatedAt": "2026-09-14T05:14:56.575Z",
+  "webSearchUsed": true
+}
