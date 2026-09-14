@@ -46,7 +46,7 @@ export function keyFromRequest(req: Request): string | undefined {
 }
 
 export const NO_KEY_MESSAGE =
-  "No API key available. Add your Anthropic API key on the start page (it stays in this browser), or set ANTHROPIC_API_KEY on the server.";
+  "Failed to parse: Anthropic API key not input. Add your own API key in the key panel (it stays in this browser), or skip parsing and answer the questions manually.";
 
 /**
  * Research + map generation never falls back to the server's key: it is the
